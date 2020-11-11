@@ -3,13 +3,13 @@ My Minimalist Vim Setup
 
 I started to think that I have to publish this repository. Someday I will probably move around that I have to use someone else&rsquo;s computer.
 
-It will be convenient for me if I can just clone this repository to build a Vim editor with the same features and settings as of my Vim editor in my home.
+It will be convenient for me if I can just clone this repository to build a Vim editor with the same features and settings as my Vim editor in my home.
 
 Plugins Used
 ------------
 
  - [Better White-Spaces](https://github.com/ntpeters/vim-better-whitespace)
- - [NERDTree](https://github.com/preservim/nerdtree)
+ - [Nerd Tree](https://github.com/preservim/nerdtree)
  - [Simple Complete](https://github.com/maxboisvert/vim-simple-complete)
 
 Theme Used
