@@ -31,8 +31,6 @@ hi ModeMsg ctermfg=1 ctermbg=NONE cterm=bold
 "hi Question
 "hi WarningMsg
 
-hi link MoreMsg ModeMsg
-
 hi TabLine ctermfg=246 ctermbg=236 cterm=NONE
 hi TabLineFill ctermfg=246 ctermbg=236 cterm=NONE
 hi TabLineSel ctermfg=231 ctermbg=233 cterm=NONE
@@ -43,69 +41,67 @@ hi PmenuSel ctermfg=111 ctermbg=236 cterm=NONE
 hi IncSearch ctermfg=234 ctermbg=220 cterm=NONE
 hi Search ctermfg=234 ctermbg=220 cterm=NONE
 
-hi Directory ctermfg=68 ctermbg=NONE cterm=NONE
-hi link NERDTreeDirSlash Directory
-hi link NERDTreeDirSlash Directory
-
 hi Folded ctermfg=249 ctermbg=0 cterm=NONE
 hi MatchParen ctermfg=NONE ctermbg=NONE cterm=underline
 
-hi Boolean ctermfg=68 ctermbg=NONE cterm=NONE
-hi Character ctermfg=68 ctermbg=NONE cterm=NONE
 hi Comment ctermfg=249 ctermbg=NONE cterm=NONE
-hi Conditional ctermfg=173 ctermbg=NONE cterm=NONE
 hi Constant ctermfg=68 ctermbg=NONE cterm=NONE
-hi Define ctermfg=173 ctermbg=NONE cterm=NONE
-
-hi ErrorMsg ctermfg=NONE ctermbg=NONE cterm=NONE
-hi WarningMsg ctermfg=NONE ctermbg=NONE cterm=NONE
-
-hi Float ctermfg=68 ctermbg=NONE cterm=NONE
 hi Function ctermfg=111 ctermbg=NONE cterm=NONE
 hi Identifier ctermfg=113 ctermbg=NONE cterm=NONE
-hi Keyword ctermfg=173 ctermbg=NONE cterm=NONE
-hi Label ctermfg=71 ctermbg=NONE cterm=NONE
-hi Number ctermfg=68 ctermbg=NONE cterm=NONE
-hi Operator ctermfg=173 ctermbg=NONE cterm=NONE
 hi PreProc ctermfg=173 ctermbg=NONE cterm=NONE
-hi Special ctermfg=231 ctermbg=NONE cterm=NONE
-hi SpecialKey ctermfg=23 ctermbg=234 cterm=NONE
+hi Special ctermfg=1 ctermbg=NONE cterm=NONE
 hi Statement ctermfg=173 ctermbg=NONE cterm=NONE
-hi StorageClass ctermfg=113 ctermbg=NONE cterm=NONE
+
 hi String ctermfg=71 ctermbg=NONE cterm=NONE
-hi Tag ctermfg=111 ctermbg=NONE cterm=NONE
 hi Title ctermfg=231 ctermbg=NONE cterm=bold
 hi Todo ctermfg=249 ctermbg=NONE cterm=inverse,bold
 hi Type ctermfg=111 ctermbg=NONE cterm=NONE
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline
 
-hi link htmlTag Tag
-hi link htmlEndTag Tag
-hi link htmlTagName Tag
-hi link htmlSpecialTagName Tag
-hi link htmlArg Tag
-"hi link htmlEvent Tag
-hi htmlSpecialChar ctermfg=68 ctermbg=NONE cterm=NONE
+" *
+hi link Define Statement
+hi link Directory Constant
+hi link MoreMsg ModeMsg
+hi link NERDTreeDir Constant
+hi link NERDTreeDirSlash Constant
+hi link Operator Normal
+hi link StorageClass Statement
+hi link Structure Statement
+hi link Tag Type
+hi link Typedef Statement
 
-hi link javaScriptFunction Identifier
-hi link javaScriptBraces Normal
-
-hi yamlKey ctermfg=111 ctermbg=NONE cterm=NONE
-hi yamlAnchor ctermfg=68 ctermbg=NONE cterm=NONE
-hi yamlAlias ctermfg=68 ctermbg=NONE cterm=NONE
-hi yamlDocumentHeader ctermfg=71 ctermbg=NONE cterm=NONE
-
-hi cssURL ctermfg=68 ctermbg=NONE cterm=NONE
-hi cssFunctionName ctermfg=186 ctermbg=NONE cterm=NONE
-hi cssColor ctermfg=68 ctermbg=NONE cterm=NONE
-hi cssPseudoClassId ctermfg=111 ctermbg=NONE cterm=NONE
-hi cssClassName ctermfg=111 ctermbg=NONE cterm=NONE
-hi cssValueLength ctermfg=68 ctermbg=NONE cterm=NONE
-hi cssCommonAttr ctermfg=167 ctermbg=NONE cterm=NONE
+" CSS
+hi link cssAttrComma Normal
 hi link cssBraces Normal
+hi link cssCustomProp Identifier
+hi link cssFunction Normal
+hi link cssFunctionName Function
+hi link cssPagePseudo Normal
+hi link cssPseudoClass Special
+hi link cssPseudoClassFn Special
+hi link cssPseudoClassId Special
+hi link cssSelectorOp Normal
+hi link cssSelectorOp2 Normal
+hi link cssTagName Normal
 
+" HTML
+hi link htmlArg Tag
+hi link htmlEndTag Tag
+hi link htmlSpecialTagName Tag
+hi link htmlTag Tag
+hi link htmlTagName Tag
+
+" JS
+hi link javaScriptBraces Normal
+hi link javaScriptFunction Statement
+hi link javaScriptNumber Number
+hi link javaScriptOperator Statement
+
+" PHP
 hi link phpIntVar Identifier
 hi link phpMemberSelector Normal
-hi link phpStorageClass Statement
-hi link phpType Statement
+hi link phpParent Normal
 hi link phpVarSelector phpIntVar
+
+" YAML
+hi link yamlKeyValueDelimiter Normal
