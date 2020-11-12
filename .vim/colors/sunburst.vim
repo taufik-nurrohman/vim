@@ -4,11 +4,11 @@
 set background=dark
 hi clear
 
-if exists("syntax_on")
+if exists('syntax_on')
   syntax reset
 endif
 
-let g:colors_name = "sunburst"
+let g:colors_name = 'sunburst'
 
 hi Normal ctermfg=231 ctermbg=233 cterm=NONE
 hi Visual ctermfg=NONE ctermbg=236 cterm=NONE
@@ -25,6 +25,13 @@ hi VertSplit ctermfg=236 ctermbg=233 cterm=NONE
 
 hi StatusLine ctermfg=231 ctermbg=236 cterm=NONE
 hi StatusLineNC ctermfg=246 ctermbg=236 cterm=NONE
+
+"hi ErrorMsg
+hi ModeMsg ctermfg=1 ctermbg=NONE cterm=bold
+"hi Question
+"hi WarningMsg
+
+hi link MoreMsg ModeMsg
 
 hi TabLine ctermfg=246 ctermbg=236 cterm=NONE
 hi TabLineFill ctermfg=246 ctermbg=236 cterm=NONE
@@ -78,7 +85,7 @@ hi link htmlArg Tag
 hi htmlSpecialChar ctermfg=68 ctermbg=NONE cterm=NONE
 
 hi link javaScriptFunction Identifier
-hi javaScriptBraces ctermfg=NONE ctermbg=NONE cterm=NONE
+hi link javaScriptBraces Normal
 
 hi yamlKey ctermfg=111 ctermbg=NONE cterm=NONE
 hi yamlAnchor ctermfg=68 ctermbg=NONE cterm=NONE
@@ -92,4 +99,4 @@ hi cssPseudoClassId ctermfg=111 ctermbg=NONE cterm=NONE
 hi cssClassName ctermfg=111 ctermbg=NONE cterm=NONE
 hi cssValueLength ctermfg=68 ctermbg=NONE cterm=NONE
 hi cssCommonAttr ctermfg=167 ctermbg=NONE cterm=NONE
-hi cssBraces ctermfg=NONE ctermbg=NONE cterm=NONE
+hi link cssBraces Normal
