@@ -12,10 +12,6 @@ Demos
 
 ![Terminal](https://user-images.githubusercontent.com/1669261/98897862-eba91b00-24de-11eb-86af-cd0e108d8c2e.png)
 
-### Android (Termux)
-
-![Termux](https://user-images.githubusercontent.com/1669261/98024479-f4dd1c80-1e3a-11eb-8f63-f25dbc06007a.jpg)
-
 Plugins Used
 ------------
 
