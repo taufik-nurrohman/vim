@@ -10,7 +10,7 @@ Demos
 
 ### Desktop (Terminal)
 
-![Terminal]()
+![Terminal](https://user-images.githubusercontent.com/1669261/98897862-eba91b00-24de-11eb-86af-cd0e108d8c2e.png)
 
 ### Android (Termux)
 

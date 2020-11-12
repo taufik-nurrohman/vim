@@ -4,11 +4,11 @@
 set background=dark
 hi clear
 
-if exists('syntax_on')
+if exists("syntax_on")
   syntax reset
 endif
 
-let g:colors_name = 'sunburst'
+let g:colors_name = "sunburst"
 
 hi Normal ctermfg=231 ctermbg=233 cterm=NONE
 hi Visual ctermfg=NONE ctermbg=236 cterm=NONE
@@ -44,6 +44,9 @@ hi IncSearch ctermfg=234 ctermbg=220 cterm=NONE
 hi Search ctermfg=234 ctermbg=220 cterm=NONE
 
 hi Directory ctermfg=68 ctermbg=NONE cterm=NONE
+hi link NERDTreeDirSlash Directory
+hi link NERDTreeDirSlash Directory
+
 hi Folded ctermfg=249 ctermbg=0 cterm=NONE
 hi MatchParen ctermfg=NONE ctermbg=NONE cterm=underline
 
@@ -100,3 +103,9 @@ hi cssClassName ctermfg=111 ctermbg=NONE cterm=NONE
 hi cssValueLength ctermfg=68 ctermbg=NONE cterm=NONE
 hi cssCommonAttr ctermfg=167 ctermbg=NONE cterm=NONE
 hi link cssBraces Normal
+
+hi link phpIntVar Identifier
+hi link phpMemberSelector Normal
+hi link phpStorageClass Statement
+hi link phpType Statement
+hi link phpVarSelector phpIntVar
