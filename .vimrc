@@ -63,7 +63,7 @@ let NERDTreeDirArrows = 1
 let NERDTreeMinimalUI = 1
 
 " Close `NERDTree` on file open
-"let NERDTreeQuitOnOpen=1
+"let NERDTreeQuitOnOpen = 1
 
 " Show hidden file(s)
 let NERDTreeShowHidden = 1
