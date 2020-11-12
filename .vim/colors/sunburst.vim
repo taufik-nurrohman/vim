@@ -46,6 +46,7 @@ hi MatchParen ctermfg=NONE ctermbg=NONE cterm=underline
 
 hi Comment ctermfg=249 ctermbg=NONE cterm=NONE
 hi Constant ctermfg=68 ctermbg=NONE cterm=NONE
+hi Directory ctermfg=68 ctermbg=NONE cterm=NONE
 hi Function ctermfg=111 ctermbg=NONE cterm=NONE
 hi Identifier ctermfg=113 ctermbg=NONE cterm=NONE
 hi PreProc ctermfg=173 ctermbg=NONE cterm=NONE
@@ -60,10 +61,9 @@ hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline
 
 " *
 hi link Define Statement
-hi link Directory Constant
 hi link MoreMsg ModeMsg
-hi link NERDTreeDir Constant
-hi link NERDTreeDirSlash Constant
+hi link NERDTreeDir Directory
+hi link NERDTreeDirSlash Directory
 hi link Operator Normal
 hi link StorageClass Statement
 hi link Structure Statement
