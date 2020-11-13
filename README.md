@@ -16,7 +16,9 @@ Plugins Used
 ------------
 
  - [Better White-Spaces](https://github.com/ntpeters/vim-better-whitespace)
+ - [Close Tag](https://github.com/alvan/vim-closetag)
  - [Commentary](https://github.com/tpope/vim-commentary)
+ - [Lexima](https://github.com/cohama/lexima.vim)
  - [Nerd Tree](https://github.com/preservim/nerdtree)
  - [Nerd Tree Unfocus](https://github.com/baopham/vim-nerdtree-unfocus)
  - [Simple Complete](https://github.com/maxboisvert/vim-simple-complete)
