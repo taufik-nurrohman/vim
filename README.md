@@ -21,6 +21,7 @@ Plugins Used
  - [Lexima](https://github.com/cohama/lexima.vim)
  - [Nerd Tree](https://github.com/preservim/nerdtree)
  - [Nerd Tree Unfocus](https://github.com/baopham/vim-nerdtree-unfocus)
+ - [Nerd Tree Visual Selection](https://github.com/PhilRunninger/nerdtree-visual-selection)
  - [Simple Complete](https://github.com/maxboisvert/vim-simple-complete)
 
 Theme Used
