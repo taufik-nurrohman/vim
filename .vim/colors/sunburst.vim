@@ -93,9 +93,14 @@ hi link htmlTagName Tag
 
 " JS
 hi link javaScriptBraces Normal
+hi link javaScriptExpression Normal
 hi link javaScriptFunction Statement
 hi link javaScriptNumber Number
 hi link javaScriptOperator Statement
+hi link javaScriptSpecial Normal
+
+" JSON
+hi link jsonBraces Normal
 
 " PHP
 hi link phpIntVar Identifier
