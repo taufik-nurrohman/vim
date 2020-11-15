@@ -63,7 +63,7 @@ let NERDTreeDirArrows = 1
 let NERDTreeMinimalUI = 1
 
 " Close `NERDTree` on file open
-"let NERDTreeQuitOnOpen = 1
+"let NERDTreeQuitOnOpen=1
 
 " Show hidden file(s)
 let NERDTreeShowHidden = 1
@@ -96,5 +96,3 @@ nnoremap <silent> <C-L> :nohlsearch <BAR> call ReloadColorScheme()<CR><C-L>
 function! ReloadColorScheme()
     execute 'colorscheme ' . g:current_theme
 endfunction
-
-execute pathogen#infect()
