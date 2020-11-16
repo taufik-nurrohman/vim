@@ -1,5 +1,6 @@
 " Modified from <https://github.com/sickill/vim-sunburst>
 " Terminal only. All GUI color definition has been removed.
+" Current Vim version: 8.0
 
 set background=dark
 hi clear
@@ -50,7 +51,8 @@ hi Directory ctermfg=68 ctermbg=NONE cterm=NONE
 hi Function ctermfg=111 ctermbg=NONE cterm=NONE
 hi Identifier ctermfg=113 ctermbg=NONE cterm=NONE
 hi PreProc ctermfg=173 ctermbg=NONE cterm=NONE
-hi Special ctermfg=1 ctermbg=NONE cterm=NONE
+hi Special ctermfg=231 ctermbg=NONE cterm=NONE
+hi SpecialChar ctermfg=103 ctermbg=NONE cterm=NONE
 hi Statement ctermfg=173 ctermbg=NONE cterm=NONE
 
 hi String ctermfg=71 ctermbg=NONE cterm=NONE
@@ -87,6 +89,7 @@ hi link cssTagName Normal
 " HTML
 hi link htmlArg Tag
 hi link htmlEndTag Tag
+hi link htmlSpecialChar SpecialChar
 hi link htmlSpecialTagName Tag
 hi link htmlTag Tag
 hi link htmlTagName Tag
@@ -95,6 +98,9 @@ hi link htmlTagName Tag
 hi link javaScriptBraces Normal
 hi link javaScriptExpression Normal
 hi link javaScriptFunction Statement
+hi link javaScriptGlobal Identifier
+hi link javaScriptIdentifier Statement
+hi link javaScriptMember Identifier
 hi link javaScriptNumber Number
 hi link javaScriptOperator Statement
 hi link javaScriptSpecial Normal
@@ -103,9 +109,17 @@ hi link javaScriptSpecial Normal
 hi link jsonBraces Normal
 
 " PHP
+hi link phpClass Function
+hi link phpClassDelimiter Normal
+hi link phpClassExtends Function
+hi link phpClassImplements Function
 hi link phpIntVar Identifier
 hi link phpMemberSelector Normal
+hi link phpNullValue phpBoolean
+hi link phpFunction Function
 hi link phpParent Normal
+hi link phpSuperglobals Identifier
+hi link phpType Statement
 hi link phpVarSelector phpIntVar
 
 " YAML
