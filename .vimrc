@@ -91,6 +91,11 @@ autocmd VimEnter * EnableStripWhitespaceOnSave
 " Toggle `NERDTree` with <CTRL>+<N>
 map <silent> <C-N> :NERDTreeToggle<CR>
 
+" Clear search marker on entering the insert mode
+autocmd InsertEnter * :let b:_search=@/ | let @/=''
+" Add previous search marker on leaving the insert mode
+autocmd InsertLeave * :let @/=get(b:,'_search','')
+
 " Clear search marker and reload color scheme with <CTRL>+<L>
 nnoremap <silent> <C-L> :nohlsearch <BAR> call ReloadColorScheme()<CR><C-L>
 function! ReloadColorScheme()
