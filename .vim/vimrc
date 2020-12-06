@@ -26,7 +26,7 @@ set tabstop=4
 set shiftwidth=4
 
 " Indent with 2 space(s) for specific file type(s)
-autocmd FileType html,json,xml,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
+autocmd FileType css,html,json,scss,xml,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
 
 " Automatic indentation
 set smarttab
