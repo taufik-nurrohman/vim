@@ -105,6 +105,9 @@ hi link javaScriptNumber Number
 hi link javaScriptOperator Statement
 hi link javaScriptSpecial Normal
 
+" JADE, PUG
+hi link pugAttributesDelimiter Normal
+
 " JSON
 hi link jsonBraces Normal
 
