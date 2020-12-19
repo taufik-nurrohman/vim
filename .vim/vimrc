@@ -95,8 +95,7 @@ autocmd VimEnter * EnableStripWhitespaceOnSave
 " Toggle `NERDTree` with <CTRL>+<N>
 map <silent> <C-N> :NERDTreeToggle<CR>
 
-" Clear search marker on save and on entering the insert mode
-autocmd BufWrite * :let @/=''
+" Clear search marker on entering the insert mode
 autocmd InsertEnter * :let b:_search=@/ | let @/=''
 " Add previous search marker on leaving the insert mode
 autocmd InsertLeave * :let @/=get(b:,'_search','')
