@@ -101,7 +101,17 @@ autocmd InsertEnter * :let b:_search=@/ | let @/=''
 autocmd InsertLeave * :let @/=get(b:,'_search','')
 
 " Clear search marker and reload color scheme with <CTRL>+<L>
-nnoremap <silent> <C-L> :nohlsearch <BAR> call ReloadColorScheme()<CR><C-L>
+nnoremap <silent> <C-L> :nohlsearch <BAR> call ReloadColorScheme()<CR><C-L><ESC>
 function! ReloadColorScheme()
     execute 'colorscheme ' . g:current_theme
 endfunction
+
+" Navigate between splits with <CTRL>+<H/J/K/L/LEFT/DOWN/UP/RIGHT>
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <C-LEFT> <C-W>h
+nnoremap <C-DOWN> <C-W>j
+nnoremap <C-UP> <C-W>k
+nnoremap <C-RIGHT> <C-W>l
