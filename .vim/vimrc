@@ -106,11 +106,7 @@ function! ReloadColorScheme()
     execute 'colorscheme ' . g:current_theme
 endfunction
 
-" Navigate between splits with <CTRL>+<H/J/K/L/LEFT/DOWN/UP/RIGHT>
-nnoremap <C-H> <C-W>h
-nnoremap <C-J> <C-W>j
-nnoremap <C-K> <C-W>k
-nnoremap <C-L> <C-W>l
+" Navigate between splits with <CTRL>+<LEFT/DOWN/UP/RIGHT>
 nnoremap <C-LEFT> <C-W>h
 nnoremap <C-DOWN> <C-W>j
 nnoremap <C-UP> <C-W>k
