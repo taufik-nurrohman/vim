@@ -17,6 +17,7 @@ Plugins Used
 
  - [Better White-Spaces](https://github.com/ntpeters/vim-better-whitespace)
  - [Commentary](https://github.com/tpope/vim-commentary)
+ - [Last Place](https://github.com/farmergreg/vim-lastplace)
  - [Lexima](https://github.com/cohama/lexima.vim)
  - [Nerd Tree](https://github.com/preservim/nerdtree)
  - [Nerd Tree Unfocus](https://github.com/baopham/vim-nerdtree-unfocus)
