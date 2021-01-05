@@ -26,11 +26,14 @@ hi VertSplit ctermfg=236 ctermbg=233 cterm=NONE
 
 hi StatusLine ctermfg=231 ctermbg=236 cterm=NONE
 hi StatusLineNC ctermfg=246 ctermbg=236 cterm=NONE
+hi StatusLineTerm ctermfg=233 ctermbg=101 cterm=NONE
+hi StatusLineTermNC ctermfg=233 ctermbg=101 cterm=NONE
 
-"hi ErrorMsg
-hi ModeMsg ctermfg=1 ctermbg=NONE cterm=bold
-"hi Question
-"hi WarningMsg
+hi ErrorMsg ctermfg=203 ctermbg=NONE
+hi ModeMsg ctermfg=95 ctermbg=NONE cterm=bold
+hi WarningMsg ctermfg=221 ctermbg=NONE
+
+hi Question ctermfg=150 ctermbg=NONE
 
 hi TabLine ctermfg=246 ctermbg=236 cterm=NONE
 hi TabLineFill ctermfg=246 ctermbg=236 cterm=NONE
@@ -39,8 +42,8 @@ hi TabLineSel ctermfg=231 ctermbg=233 cterm=NONE
 hi Pmenu ctermfg=111 ctermbg=234 cterm=NONE
 hi PmenuSel ctermfg=111 ctermbg=236 cterm=NONE
 
-hi IncSearch ctermfg=234 ctermbg=220 cterm=NONE
-hi Search ctermfg=234 ctermbg=220 cterm=NONE
+hi IncSearch ctermfg=234 ctermbg=228 cterm=NONE
+hi Search ctermfg=234 ctermbg=228 cterm=NONE
 
 hi Folded ctermfg=249 ctermbg=0 cterm=NONE
 hi MatchParen ctermfg=NONE ctermbg=NONE cterm=underline
@@ -48,6 +51,7 @@ hi MatchParen ctermfg=NONE ctermbg=NONE cterm=underline
 hi Comment ctermfg=249 ctermbg=NONE cterm=NONE
 hi Constant ctermfg=68 ctermbg=NONE cterm=NONE
 hi Directory ctermfg=68 ctermbg=NONE cterm=NONE
+hi Error ctermfg=233 ctermbg=203 cterm=NONE
 hi Function ctermfg=111 ctermbg=NONE cterm=NONE
 hi Identifier ctermfg=113 ctermbg=NONE cterm=NONE
 hi PreProc ctermfg=173 ctermbg=NONE cterm=NONE
@@ -63,6 +67,7 @@ hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline
 
 " *
 hi link Define Statement
+hi link ExtraWhitespace Error
 hi link MoreMsg ModeMsg
 hi link NERDTreeDir Directory
 hi link NERDTreeDirSlash Directory
@@ -107,6 +112,7 @@ hi link javaScriptSpecial Normal
 
 " JADE, PUG
 hi link pugAttributesDelimiter Normal
+hi link pugTag htmlTag
 
 " JSON
 hi link jsonBraces Normal
