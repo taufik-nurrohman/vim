@@ -113,7 +113,7 @@ function! ReloadColorScheme()
     execute 'colorscheme ' . g:current_theme
 endfunction
 
-" Navigate between splits with <CTRL+LEFT/DOWN/UP/RIGHT>
+" Navigate between split(s) with <CTRL+LEFT/DOWN/UP/RIGHT>
 nnoremap <C-LEFT> <C-W>h
 nnoremap <C-DOWN> <C-W>j
 nnoremap <C-UP> <C-W>k
@@ -122,7 +122,7 @@ nnoremap <C-RIGHT> <C-W>l
 " Exit terminal mode with <CTRL+X>
 tnoremap <C-X> <C-W>:q!<CR>
 
-" Navigate to other splits with <CTRL>+<LEFT/DOWN/UP/RIGHT>
+" Navigate to other split(s) with <CTRL>+<LEFT/DOWN/UP/RIGHT>
 tnoremap <C-LEFT> <C-W>h
 tnoremap <C-DOWN> <C-W>j
 tnoremap <C-UP> <C-W>k
