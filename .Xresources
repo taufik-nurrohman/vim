@@ -1,0 +1,9 @@
+xterm*utf8: 1
+
+xterm*faceName: Nimbus Mono L:antialias=false
+xterm*faceSize: 10
+
+xterm*rightScrollBar: false
+xterm*scrollTtyOutput: false
+
+xterm*saveLines: 10000

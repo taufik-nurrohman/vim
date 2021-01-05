@@ -5,12 +5,7 @@ I started to think that I have to publish this repository. Someday I will probab
 
 It will be convenient for me if I can just clone this repository to build a Vim editor with the same features and settings as my Vim editor in my home.
 
-Demos
------
-
-### Desktop (Terminal)
-
-![Terminal](https://user-images.githubusercontent.com/1669261/98897862-eba91b00-24de-11eb-86af-cd0e108d8c2e.png)
+![Terminal](https://user-images.githubusercontent.com/1669261/103608446-f7004c00-4f4d-11eb-9d50-02d5bc32499d.png)
 
 Plugins Used
 ------------

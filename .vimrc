@@ -25,6 +25,10 @@ set softtabstop=4
 set tabstop=4
 set shiftwidth=4
 
+" Open split(s) to the bottom and/or right
+set splitbelow
+set splitright
+
 " Indent with 2 space(s) for specific file type(s)
 autocmd FileType css,html,jade,json,pug,scss,xml,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
 
@@ -61,6 +65,8 @@ set background=dark
 execute 'colorscheme ' . g:current_theme
 
 let NERDTreeDirArrows = 1
+let NERDTreeDirArrowExpandable="+"
+let NERDTreeDirArrowCollapsible="-"
 
 " Hide help text and up level description
 " To up one level directory, press <U>
@@ -74,6 +80,7 @@ let NERDTreeShowHidden = 1
 
 " Hide these file(s) from the tree
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store
+set wildignore+=composer.lock,node_modules,package-lock.json
 let NERDTreeRespectWildIgnore = 1
 
 " Dummy variable
@@ -92,7 +99,7 @@ let g:strip_whitespace_confirm = 0
 autocmd VimEnter * EnableWhitespace
 autocmd VimEnter * EnableStripWhitespaceOnSave
 
-" Toggle `NERDTree` with <CTRL>+<N>
+" Toggle `NERDTree` with <CTRL+N>
 map <silent> <C-N> :NERDTreeToggle<CR>
 
 " Clear search marker on entering the insert mode
@@ -106,8 +113,17 @@ function! ReloadColorScheme()
     execute 'colorscheme ' . g:current_theme
 endfunction
 
-" Navigate between splits with <CTRL>+<LEFT/DOWN/UP/RIGHT>
+" Navigate between splits with <CTRL+LEFT/DOWN/UP/RIGHT>
 nnoremap <C-LEFT> <C-W>h
 nnoremap <C-DOWN> <C-W>j
 nnoremap <C-UP> <C-W>k
 nnoremap <C-RIGHT> <C-W>l
+
+" Exit terminal mode with <CTRL+X>
+tnoremap <C-X> <C-W>:q!<CR>
+
+" Navigate to other splits with <CTRL>+<LEFT/DOWN/UP/RIGHT>
+tnoremap <C-LEFT> <C-W>h
+tnoremap <C-DOWN> <C-W>j
+tnoremap <C-UP> <C-W>k
+tnoremap <C-RIGHT> <C-W>l
