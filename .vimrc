@@ -65,8 +65,8 @@ set background=dark
 execute 'colorscheme ' . g:current_theme
 
 let NERDTreeDirArrows = 1
-let NERDTreeDirArrowExpandable="+"
-let NERDTreeDirArrowCollapsible="-"
+let NERDTreeDirArrowExpandable='+'
+let NERDTreeDirArrowCollapsible='-'
 
 " Hide help text and up level description
 " To up one level directory, press <U>
