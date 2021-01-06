@@ -1,4 +1,8 @@
-let g:current_theme = 'sunburst'
+" Set default color scheme
+let g:skin = 'sunburst'
+
+" Set leader key as `,`
+let g:mapleader = ','
 
 " Set default encoding
 set encoding=utf-8
@@ -62,18 +66,24 @@ syntax on
 
 set background=dark
 
-execute 'colorscheme ' . g:current_theme
+exec 'colorscheme ' . g:skin
 
 let NERDTreeDirArrows = 1
-let NERDTreeDirArrowExpandable='+'
-let NERDTreeDirArrowCollapsible='-'
+let NERDTreeDirArrowExpandable = '+'
+let NERDTreeDirArrowCollapsible = '-'
 
 " Hide help text and up level description
 " To up one level directory, press <U>
 let NERDTreeMinimalUI = 1
 
+" Allow to use the mouse click to open file/folder
+let NERDTreeMouseMode = 3
+
+" Disable `NERDTree` status line
+let NERDTreeStatusline = ' '
+
 " Close `NERDTree` on file open
-"let NERDTreeQuitOnOpen=1
+" let NERDTreeQuitOnOpen = 1
 
 " Show hidden file(s)
 let NERDTreeShowHidden = 1
@@ -83,12 +93,16 @@ set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store
 set wildignore+=composer.lock,node_modules,package-lock.json
 let NERDTreeRespectWildIgnore = 1
 
+" Put `NERDTree` to the left
+let NERDTreeWinPos = 'left'
+let NERDTreeWinSize = 30
+
 " Dummy variable
 autocmd StdInReadPre * let s:std_in = 1
 " Automatically open `NERDTree` when vim starts up with no file specified
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 " Automatically open `NERDTree` on file open, then focus to the file contents
-autocmd VimEnter * if argc() != 0 && !exists('s:std_in') | NERDTree | wincmd p | endif
+autocmd VimEnter * if argc() != 0 && !exists('s:std_in') | NERDTree % | wincmd p | endif
 " Automatically close `NERDTree` on last file close
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | q | endif
 
@@ -99,19 +113,24 @@ let g:strip_whitespace_confirm = 0
 autocmd VimEnter * EnableWhitespace
 autocmd VimEnter * EnableStripWhitespaceOnSave
 
-" Toggle `NERDTree` with <CTRL+N>
-map <silent> <C-N> :NERDTreeToggle<CR>
-
 " Clear search marker on entering the insert mode
 autocmd InsertEnter * :let b:_search=@/ | let @/=''
 " Add previous search marker on leaving the insert mode
 autocmd InsertLeave * :let @/=get(b:,'_search','')
 
-" Clear search marker and reload color scheme with <CTRL>+<L>
+" Clear search marker and reload color scheme with <CTRL+L>
 nnoremap <silent> <C-L> :nohlsearch <BAR> call ReloadColorScheme()<CR><C-L><ESC>
 function! ReloadColorScheme()
-    execute 'colorscheme ' . g:current_theme
+    exec 'colorscheme ' . g:skin
 endfunction
+
+" Map common task(s) with leader key
+" map <silent> <leader>q :q<CR>
+" map <silent> <leader>w :w<CR>
+" map <silent> <leader>x :x<CR>
+
+" Toggle `NERDTree` with <CTRL+N>
+map <silent> <C-N> :NERDTreeToggle<CR>
 
 " Navigate between split(s) with <CTRL+LEFT/DOWN/UP/RIGHT>
 nnoremap <C-LEFT> <C-W>h
@@ -119,14 +138,12 @@ nnoremap <C-DOWN> <C-W>j
 nnoremap <C-UP> <C-W>k
 nnoremap <C-RIGHT> <C-W>l
 
-" Enter terminal mode with <CTRL+SHIFT+T>
-nnoremap <C-S-T> :term<CR>
-
-" Exit terminal mode with <CTRL+SHIFT+T>
-tnoremap <C-S-T> <C-W>:q!<CR>
-
 " Navigate to other split(s) from terminal with <CTRL+LEFT/DOWN/UP/RIGHT>
 tnoremap <C-LEFT> <C-W>h
 tnoremap <C-DOWN> <C-W>j
 tnoremap <C-UP> <C-W>k
 tnoremap <C-RIGHT> <C-W>l
+
+" Toggle terminal mode with <CTRL+SHIFT+T>
+nnoremap <silent> <C-S-T> :term<CR>
+tnoremap <silent> <C-S-T> <C-W>:q!<CR>
