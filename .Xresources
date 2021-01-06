@@ -1,9 +1,37 @@
-xterm*utf8: 1
+xterm.vt100.utf8: true
+xterm.vt100.title: Terminal
 
-xterm*faceName: Nimbus Mono L:antialias=false
-xterm*faceSize: 10
+xterm.vt100.faceName: Nimbus Mono L:antialias=false
+xterm.vt100.faceSize: 10
 
-xterm*rightScrollBar: false
-xterm*scrollTtyOutput: false
+xterm.vt100.scrollBar: false
+xterm.vt100.scrollTtyOutput: false
 
-xterm*saveLines: 10000
+xterm.vt100.saveLines: 10000
+
+! Terminal background color
+xterm.vt100.background: #121212
+
+! Terminal text color
+xterm.vt100.foreground: #ffffff
+
+! Terminal user and host text color
+xterm.vt100.color2: #5faf5f
+xterm.vt100.color10: #87d75f
+
+! Terminal location text color
+xterm.vt100.color4: #5f87d7
+xterm.vt100.color12: #87afff
+
+! Terminal error text color
+xterm.vt100.color1: #ff5f5f
+xterm.vt100.color9: #d75f5f
+
+! TODO: Add other color(s)
+
+! Allow to copy text with <CTRL+SHIFT+C>
+! Allow to paste text with <CTRL+SHIFT+V>
+xterm.vt100.selectToClipboard: true
+xterm.vt100.translations: #override \n\
+  Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+  Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
