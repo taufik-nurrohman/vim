@@ -119,10 +119,13 @@ nnoremap <C-DOWN> <C-W>j
 nnoremap <C-UP> <C-W>k
 nnoremap <C-RIGHT> <C-W>l
 
-" Exit terminal mode with <CTRL+X>
-tnoremap <C-X> <C-W>:q!<CR>
+" Enter terminal mode with <CTRL+SHIFT+T>
+nnoremap <C-S-T> :term<CR>
 
-" Navigate to other split(s) with <CTRL>+<LEFT/DOWN/UP/RIGHT>
+" Exit terminal mode with <CTRL+SHIFT+T>
+tnoremap <C-S-T> <C-W>:q!<CR>
+
+" Navigate to other split(s) from terminal with <CTRL+LEFT/DOWN/UP/RIGHT>
 tnoremap <C-LEFT> <C-W>h
 tnoremap <C-DOWN> <C-W>j
 tnoremap <C-UP> <C-W>k
