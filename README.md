@@ -18,7 +18,6 @@ Plugins Used
  - [Nerd Tree](https://github.com/preservim/nerdtree)
  - [Nerd Tree Unfocus](https://github.com/baopham/vim-nerdtree-unfocus)
  - [Nerd Tree Visual Selection](https://github.com/PhilRunninger/nerdtree-visual-selection)
- - [Rag Tag](https://github.com/tpope/vim-ragtag)
  - [Repeat](https://github.com/tpope/vim-repeat)
  - [Simple Complete](https://github.com/maxboisvert/vim-simple-complete)
  - [Unimpaired](https://github.com/tpope/vim-unimpaired)
