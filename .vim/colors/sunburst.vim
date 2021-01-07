@@ -26,8 +26,8 @@ hi VertSplit ctermfg=236 ctermbg=233 cterm=NONE
 
 hi StatusLine ctermfg=231 ctermbg=236 cterm=NONE
 hi StatusLineNC ctermfg=246 ctermbg=236 cterm=NONE
-hi StatusLineTerm ctermfg=233 ctermbg=101 cterm=NONE
-hi StatusLineTermNC ctermfg=233 ctermbg=101 cterm=NONE
+hi StatusLineTerm ctermfg=233 ctermbg=244 cterm=NONE
+hi StatusLineTermNC ctermfg=233 ctermbg=244 cterm=NONE
 
 hi ErrorMsg ctermfg=203 ctermbg=NONE
 hi ModeMsg ctermfg=95 ctermbg=NONE cterm=bold
