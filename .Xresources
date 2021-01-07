@@ -9,25 +9,46 @@ xterm.vt100.scrollTtyOutput: false
 
 xterm.vt100.saveLines: 10000
 
+! Terminal column, row, left, top
+xterm.vt100.geometry: 100x30+0+0
+
 ! Terminal background color
-xterm.vt100.background: #121212
+xterm.vt100.background: #080808
 
 ! Terminal text color
 xterm.vt100.foreground: #ffffff
 
-! Terminal user and host text color
-xterm.vt100.color2: #5faf5f
-xterm.vt100.color10: #87d75f
+! Black color
+xterm.vt100.color0: #121212
+xterm.vt100.color8: #080808
 
-! Terminal location text color
-xterm.vt100.color4: #5f87d7
-xterm.vt100.color12: #87afff
-
-! Terminal error text color
+! Red color
 xterm.vt100.color1: #ff5f5f
 xterm.vt100.color9: #d75f5f
 
-! TODO: Add other color(s)
+! Green color
+xterm.vt100.color2: #5faf5f
+xterm.vt100.color10: #87d75f
+
+! Yellow color
+xterm.vt100.color3: #ffff87
+xterm.vt100.color11: #d7d75f
+
+! Blue color
+xterm.vt100.color4: #5f87d7
+xterm.vt100.color12: #87afff
+
+! Purple color
+xterm.vt100.color5: #875faf
+xterm.vt100.color13: #875f87
+
+! Cyan color
+xterm.vt100.color6: #d7ffff
+xterm.vt100.color14: #d7ffd7
+
+! White color
+xterm.vt100.color7: #eeeeee
+xterm.vt100.color15: #e4e4e4
 
 ! Allow to copy text with <CTRL+SHIFT+C>
 ! Allow to paste text with <CTRL+SHIFT+V>

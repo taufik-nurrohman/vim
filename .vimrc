@@ -101,8 +101,7 @@ let NERDTreeWinSize = 30
 
 " Dummy variable
 autocmd StdInReadPre * let s:std_in = 1
-" Automatically open `NERDTree` when vim starts up with no file specified
-" Automatically open `NERDTree` on file open, then focus to the file contents
+" Automatically open `NERDTree` when Vim starts up
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | else | NERDTree % | wincmd p | endif
 " Automatically close `NERDTree` on last file close
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | q | endif
@@ -127,7 +126,7 @@ autocmd InsertLeave * :let @/=get(b:,'_search','')
 " Clear search marker and reload color scheme with <CTRL+L>
 nnoremap <silent> <C-L> :nohlsearch <BAR> call ReloadColorScheme()<CR><C-L><ESC>
 function! ReloadColorScheme()
-    exec 'colorscheme ' . g:skin
+  exec 'colorscheme ' . g:skin
 endfunction
 
 " Map common task(s) with leader key
