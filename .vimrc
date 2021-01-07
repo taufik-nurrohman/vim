@@ -9,6 +9,8 @@ set encoding=utf-8
 
 " Show line number(s)
 set number
+
+" Show file name and cursor position at the bottom bar
 set ruler
 
 " Enable line wrap
@@ -100,9 +102,8 @@ let NERDTreeWinSize = 30
 " Dummy variable
 autocmd StdInReadPre * let s:std_in = 1
 " Automatically open `NERDTree` when vim starts up with no file specified
-autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 " Automatically open `NERDTree` on file open, then focus to the file contents
-autocmd VimEnter * if argc() != 0 && !exists('s:std_in') | NERDTree % | wincmd p | endif
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | else | NERDTree % | wincmd p | endif
 " Automatically close `NERDTree` on last file close
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | q | endif
 
@@ -112,6 +113,11 @@ let g:strip_whitelines_on_eof = 1
 let g:strip_whitespace_confirm = 0
 autocmd VimEnter * EnableWhitespace
 autocmd VimEnter * EnableStripWhitespaceOnSave
+
+" Deactivate ruler on entering the insert mode
+autocmd InsertEnter * setlocal noruler
+" Reactivate ruler on leaving the insert mode
+autocmd InsertLeave * setlocal ruler
 
 " Clear search marker on entering the insert mode
 autocmd InsertEnter * :let b:_search=@/ | let @/=''
@@ -125,25 +131,37 @@ function! ReloadColorScheme()
 endfunction
 
 " Map common task(s) with leader key
-" map <silent> <leader>q :q<CR>
-" map <silent> <leader>w :w<CR>
-" map <silent> <leader>x :x<CR>
+" map <silent> <Leader>q :q<CR>
+" map <silent> <Leader>w :w<CR>
+" map <silent> <Leader>x :x<CR>
+
+" Preserve visual block selection after indent/outdent
+vmap > >gv^
+vmap < <gv^
+
+" Getting back to normal mode after entering visual mode feels so slow.
+" Maybe this is due to a certain plugin. This line solves the problem.
+set ttimeout
+set ttimeoutlen=50
 
 " Toggle `NERDTree` with <CTRL+N>
 map <silent> <C-N> :NERDTreeToggle<CR>
 
 " Navigate between split(s) with <CTRL+LEFT/DOWN/UP/RIGHT>
-nnoremap <C-LEFT> <C-W>h
-nnoremap <C-DOWN> <C-W>j
-nnoremap <C-UP> <C-W>k
-nnoremap <C-RIGHT> <C-W>l
+nnoremap <C-Left> <C-W>h
+nnoremap <C-Down> <C-W>j
+nnoremap <C-Up> <C-W>k
+nnoremap <C-Right> <C-W>l
 
 " Navigate to other split(s) from terminal with <CTRL+LEFT/DOWN/UP/RIGHT>
-tnoremap <C-LEFT> <C-W>h
-tnoremap <C-DOWN> <C-W>j
-tnoremap <C-UP> <C-W>k
-tnoremap <C-RIGHT> <C-W>l
+tnoremap <C-Left> <C-W>h
+tnoremap <C-Down> <C-W>j
+tnoremap <C-Up> <C-W>k
+tnoremap <C-Right> <C-W>l
 
-" Toggle terminal mode with <CTRL+SHIFT+T>
-nnoremap <silent> <C-S-T> :term<CR>
-tnoremap <silent> <C-S-T> <C-W>:q!<CR>
+" Toggle terminal mode with <SHIFT+T>
+nnoremap <silent> <S-T> :term++rows=8<CR>
+tnoremap <silent> <S-T> <C-W>:q!<CR>
+
+" As alternative, you can also exit terminal mode with <CTRL+D>
+tnoremap <silent> <C-D> <C-W>:q!<CR>
