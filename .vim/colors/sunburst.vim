@@ -46,7 +46,7 @@ hi IncSearch ctermfg=234 ctermbg=228 cterm=NONE
 hi Search ctermfg=234 ctermbg=228 cterm=NONE
 
 hi Folded ctermfg=249 ctermbg=0 cterm=NONE
-hi MatchParen ctermfg=NONE ctermbg=NONE cterm=underline
+hi MatchParen ctermfg=NONE ctermbg=236 cterm=NONE
 
 hi Comment ctermfg=249 ctermbg=NONE cterm=NONE
 hi Constant ctermfg=68 ctermbg=NONE cterm=NONE
