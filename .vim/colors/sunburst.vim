@@ -131,5 +131,21 @@ hi link phpSuperglobals Identifier
 hi link phpType Statement
 hi link phpVarSelector phpIntVar
 
+" XML
+hi link xmlAttribPunct Tag
+hi link xmlCdata SpecialChar
+hi link xmlCdataCdata SpecialChar
+hi link xmlCdataEnd SpecialChar
+hi link xmlCdataStart SpecialChar
+hi link xmlDocType Comment
+hi link xmlDocTypeKeyword Comment
+hi link xmlEndTag Tag
+hi link xmlEntity SpecialChar
+hi link xmlEntityPunct SpecialChar
+hi link xmlEqual Tag
+hi link xmlProcessing Comment
+hi link xmlProcessingDelim Comment
+hi link xmlTag Tag
+
 " YAML
 hi link yamlKeyValueDelimiter Normal

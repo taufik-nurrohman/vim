@@ -21,10 +21,14 @@ set showcmd
 
 " Do not `hlsearch` until I press <ENTER>
 set noincsearch
-
 set hlsearch
+
+" Ignore case unless I have some upper-case letter(s) in it
 set ignorecase
 set smartcase
+
+" Disable regular expression search/replace
+set nomagic
 
 " Indent with 4 space(s)
 set softtabstop=4
@@ -70,34 +74,34 @@ set background=dark
 
 exec 'colorscheme ' . g:skin
 
-let NERDTreeDirArrows = 1
-let NERDTreeDirArrowExpandable = '+'
-let NERDTreeDirArrowCollapsible = '-'
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '-'
 
 " Hide help text and up level description
 " To up one level directory, press <U>
-let NERDTreeMinimalUI = 1
+let g:NERDTreeMinimalUI = 1
 
 " Allow to use the mouse click to open file/folder
-let NERDTreeMouseMode = 3
+let g:NERDTreeMouseMode = 3
 
 " Disable `NERDTree` status line
-let NERDTreeStatusline = ' '
+let g:NERDTreeStatusline = ' '
 
 " Close `NERDTree` on file open
 " let NERDTreeQuitOnOpen = 1
 
 " Show hidden file(s)
-let NERDTreeShowHidden = 1
+let g:NERDTreeShowHidden = 1
 
 " Hide these file(s) from the tree
 set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store
 set wildignore+=composer.lock,node_modules,package-lock.json
-let NERDTreeRespectWildIgnore = 1
+let g:NERDTreeRespectWildIgnore = 1
 
 " Put `NERDTree` to the left
-let NERDTreeWinPos = 'left'
-let NERDTreeWinSize = 30
+let g:NERDTreeWinPos = 'left'
+let g:NERDTreeWinSize = 30
 
 " Dummy variable
 autocmd StdInReadPre * let s:std_in = 1
@@ -124,7 +128,7 @@ autocmd InsertEnter * :let b:_search=@/ | let @/=''
 autocmd InsertLeave * :let @/=get(b:,'_search','')
 
 " Clear search marker and reload color scheme with <CTRL+L>
-nnoremap <silent> <C-L> :nohlsearch <BAR> call ReloadColorScheme()<CR><C-L><ESC>
+nnoremap <silent> <C-L> :nohlsearch <bar> call ReloadColorScheme()<CR><C-L><Esc>
 function! ReloadColorScheme()
   exec 'colorscheme ' . g:skin
 endfunction
@@ -133,6 +137,12 @@ endfunction
 " map <silent> <Leader>q :q<CR>
 " map <silent> <Leader>w :w<CR>
 " map <silent> <Leader>x :x<CR>
+
+" Force exit with <BACKSPACE> in normal mode
+nmap <silent> <Backspace> :q!<CR>
+
+" Exit visual mode with <BACKSPACE>
+vmap <Backspace> <Esc>
 
 " Preserve visual block selection after indent/outdent
 vmap > >gv^
@@ -159,7 +169,7 @@ tnoremap <C-Up> <C-W>k
 tnoremap <C-Right> <C-W>l
 
 " Toggle terminal mode with <SHIFT+T>
-nnoremap <silent> <S-T> :term++rows=8<CR>
+nnoremap <silent> <S-T> :term++rows=10<CR>
 tnoremap <silent> <S-T> <C-W>:q!<CR>
 
 " As alternative, you can also exit terminal mode with <CTRL+D>
