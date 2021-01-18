@@ -156,15 +156,15 @@ hi link xmlCdata Comment
 hi link xmlCdataCdata Comment
 hi link xmlCdataEnd Comment
 hi link xmlCdataStart Comment
-hi link xmlDocType Comment
-hi link xmlDocTypeDecl Comment
-hi link xmlDocTypeKeyword Comment
+hi link xmlDocType Tag
+hi link xmlDocTypeDecl Tag
+hi link xmlDocTypeKeyword Tag
 hi link xmlEndTag Tag
 hi link xmlEntity SpecialChar
 hi link xmlEntityPunct SpecialChar
 hi link xmlEqual Tag
-hi link xmlProcessing Comment
-hi link xmlProcessingDelim Comment
+hi link xmlProcessing Tag
+hi link xmlProcessingDelim Tag
 hi link xmlTag Tag
 
 " YAML

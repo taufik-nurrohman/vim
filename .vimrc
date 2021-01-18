@@ -96,8 +96,8 @@ let g:NERDTreeStatusline = ' '
 let g:NERDTreeShowHidden = 1
 
 " Hide these file(s) from the tree
-set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store
-set wildignore+=composer.lock,node_modules,package-lock.json
+set wildignore+=*.DS_Store,*.class,*.hg,*.o,*.obj,*.pyc,*.svn,*.swp
+set wildignore+=.git,composer.lock,node_modules,package-lock.json
 let g:NERDTreeRespectWildIgnore = 1
 
 " Put `NERDTree` to the left
@@ -129,7 +129,7 @@ autocmd InsertEnter * :let b:_search=@/ | let @/=''
 autocmd InsertLeave * :let @/=get(b:,'_search','')
 
 " Clear search marker and reload color scheme with <CTRL+L>
-nnoremap <silent> <C-L> :nohlsearch <bar> call ReloadColorScheme()<CR><C-L><Esc>
+nnoremap <silent> <C-L> :nohlsearch <bar> call ReloadColorScheme()<CR><Esc>
 function! ReloadColorScheme()
   exec 'colorscheme ' . g:skin
 endfunction
@@ -144,7 +144,7 @@ set ttimeout
 set ttimeoutlen=50
 
 " Toggle `NERDTree` with <CTRL+N>
-map <silent> <C-N> :NERDTreeToggle<CR>
+nmap <silent> <C-N> :NERDTreeToggle<CR>
 
 " Navigate between split(s) with <CTRL+LEFT/DOWN/UP/RIGHT>
 nnoremap <C-Left> <C-W>h
