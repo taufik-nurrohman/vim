@@ -132,12 +132,14 @@ hi link phpType Statement
 hi link phpVarSelector phpIntVar
 
 " XML
+hi link xmlAttrib Tag
 hi link xmlAttribPunct Tag
-hi link xmlCdata SpecialChar
-hi link xmlCdataCdata SpecialChar
-hi link xmlCdataEnd SpecialChar
-hi link xmlCdataStart SpecialChar
+hi link xmlCdata Comment
+hi link xmlCdataCdata Comment
+hi link xmlCdataEnd Comment
+hi link xmlCdataStart Comment
 hi link xmlDocType Comment
+hi link xmlDocTypeDecl Comment
 hi link xmlDocTypeKeyword Comment
 hi link xmlEndTag Tag
 hi link xmlEntity SpecialChar

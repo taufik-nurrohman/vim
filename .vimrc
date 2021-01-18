@@ -23,12 +23,13 @@ set showcmd
 set noincsearch
 set hlsearch
 
-" Ignore case unless I have some upper-case letter(s) in it
+" Ignore case in search string unless I have some upper-case letter(s) there
 set ignorecase
 set smartcase
 
-" Disable regular expression search/replace
-set nomagic
+" Disable regular expression only in search/replace mode
+autocmd CmdWinEnter * set nomagic
+autocmd CmdWinLeave * set magic
 
 " Indent with 4 space(s)
 set softtabstop=4
@@ -40,7 +41,7 @@ set splitbelow
 set splitright
 
 " Indent with 2 space(s) for specific file type(s)
-autocmd FileType css,html,jade,json,pug,scss,xml,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
+autocmd FileType css,html,jade,json,pug,scss,sgml,xml,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
 
 " Automatic indentation
 set smarttab
@@ -83,13 +84,13 @@ let g:NERDTreeDirArrowCollapsible = '-'
 let g:NERDTreeMinimalUI = 1
 
 " Allow to use the mouse click to open file/folder
-let g:NERDTreeMouseMode = 3
+" let g:NERDTreeMouseMode = 3
 
 " Disable `NERDTree` status line
 let g:NERDTreeStatusline = ' '
 
 " Close `NERDTree` on file open
-" let NERDTreeQuitOnOpen = 1
+" let g:NERDTreeQuitOnOpen = 1
 
 " Show hidden file(s)
 let g:NERDTreeShowHidden = 1
@@ -132,17 +133,6 @@ nnoremap <silent> <C-L> :nohlsearch <bar> call ReloadColorScheme()<CR><C-L><Esc>
 function! ReloadColorScheme()
   exec 'colorscheme ' . g:skin
 endfunction
-
-" Map common task(s) with leader key
-" map <silent> <Leader>q :q<CR>
-" map <silent> <Leader>w :w<CR>
-" map <silent> <Leader>x :x<CR>
-
-" Force exit with <BACKSPACE> in normal mode
-nmap <silent> <Backspace> :q!<CR>
-
-" Exit visual mode with <BACKSPACE>
-vmap <Backspace> <Esc>
 
 " Preserve visual block selection after indent/outdent
 vmap > >gv^
