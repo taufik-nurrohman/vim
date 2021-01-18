@@ -118,6 +118,23 @@ hi link pugTag htmlTag
 " JSON
 hi link jsonBraces Normal
 
+" Mallard
+hi link mallardTagName Tag
+
+" Markdown
+hi link markdownCode SpecialChar
+hi link markdownCodeBlock SpecialChar
+hi link markdownHeadingDelimiter Number
+hi link markdownHeadingRule Number
+hi link markdownH1 Tag
+hi link markdownH2 Tag
+hi link markdownH3 Tag
+hi link markdownH4 Tag
+hi link markdownH5 Tag
+hi link markdownH6 Tag
+hi link markdownListMarker Keyword
+hi link markdownOrderedListMarker Number
+
 " PHP
 hi link phpClass Function
 hi link phpClassDelimiter Normal
