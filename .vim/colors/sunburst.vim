@@ -75,6 +75,7 @@ hi link Operator Normal
 hi link StorageClass Statement
 hi link Structure Statement
 hi link Tag Type
+hi link Terminal Normal
 hi link Typedef Statement
 
 " CSS
