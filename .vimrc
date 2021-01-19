@@ -1,8 +1,22 @@
+" Maintained by Taufik Nurrohman
+" <https://taufik-nurrohman.com>
+
+set title
+set nocompatible
+
+set t_Co=256
+set t_AB=^[[48;5;%dm
+set t_AF=^[[38;5;%dm
+set term=xterm-256color
+
+" Store swap file(s) in a custom directory
+set directory^=$HOME/.vim/tmp//
+
+filetype plugin indent on
+syntax on
+
 " Set default color scheme
 let g:skin = 'sunburst'
-
-" Set leader key as `,`
-let g:mapleader = ','
 
 " Set default encoding
 set encoding=utf-8
@@ -12,6 +26,9 @@ set number
 
 " Show file name and cursor position at the bottom bar
 set ruler
+
+" Always show the status line
+set laststatus=2
 
 " Enable line wrap
 set wrap
@@ -44,6 +61,8 @@ set splitright
 autocmd FileType css,html,jade,json,pug,scss,sgml,xml,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
 
 " Automatic indentation
+set autoindent
+set smartindent
 set smarttab
 set expandtab
 
@@ -60,17 +79,6 @@ set sidescrolloff=15
 
 set mouse=a
 
-set title
-set nocompatible
-
-set t_Co=256
-set t_AB=^[[48;5;%dm
-set t_AF=^[[38;5;%dm
-set term=xterm-256color
-
-filetype plugin indent on
-syntax on
-
 set background=dark
 
 exec 'colorscheme ' . g:skin
@@ -82,6 +90,9 @@ let g:NERDTreeDirArrowCollapsible = '-'
 " Hide help text and up level description
 " To up one level directory, press <U>
 let g:NERDTreeMinimalUI = 1
+
+" Use a compact menu that fits on a single line
+let g:NERDTreeMinimalMenu = 1
 
 " Allow to use the mouse click to open file/folder
 " let g:NERDTreeMouseMode = 3
@@ -164,3 +175,16 @@ tnoremap <silent> <S-T> <C-W>:q!<CR>
 
 " As alternative, you can also exit terminal mode with <CTRL+D>
 tnoremap <silent> <C-D> <C-W>:q!<CR>
+
+" I am barely use the <CTRL+B/D/F> to scroll the window so it is safe to override
+nnoremap <silent> <C-D> :q!<CR>
+
+" Set leader key as ` `
+nnoremap <Space> <Nop>
+let g:mapleader = ' '
+
+" Edit `.vimrc` file with <SPACE+,>
+nmap <silent> <Leader>, :tabedit $MYVIMRC<CR>
+
+" Select all with <SPACE+A>
+nmap <Leader>a ggVG
