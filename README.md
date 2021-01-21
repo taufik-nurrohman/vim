@@ -13,6 +13,7 @@ Plugins Used
  - [Better White-Spaces](https://github.com/ntpeters/vim-better-whitespace)
  - [Bullets](https://github.com/dkarter/bullets.vim)
  - [Commentary](https://github.com/tpope/vim-commentary)
+ - [CTRL+P](https://github.com/ctrlpvim/ctrlp.vim)
  - [Last Place](https://github.com/farmergreg/vim-lastplace)
  - [Lexima](https://github.com/cohama/lexima.vim)
  - [Nerd Tree](https://github.com/preservim/nerdtree)

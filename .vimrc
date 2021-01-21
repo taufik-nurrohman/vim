@@ -176,11 +176,22 @@ tnoremap <silent> <S-T> <C-W>:q!<CR>
 " As alternative, you can also exit terminal mode with <CTRL+D>
 tnoremap <silent> <C-D> <C-W>:q!<CR>
 
-" I am barely use the <CTRL+B/D/F> to scroll the window so it is safe to override
+" I almost never use the <CTRL+B/D/E/F/M/U/Y> to scroll the window so it is safe to override
+" nnoremap <silent> <C-B> :TODO<CR>
 nnoremap <silent> <C-D> :q!<CR>
+" nnoremap <silent> <C-E> :TODO<CR>
+" nnoremap <silent> <C-F> :CtrlP<CR>
+let g:ctrlp_brief_prompt = 1
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_map = '<C-F>'
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_types = ['fil', 'buf']
+" nnoremap <silent> <C-M> :TODO<CR>
+" nnoremap <silent> <C-U> :TODO<CR>
+" nnoremap <silent> <C-Y> :TODO<CR>
 
 " Set leader key as ` `
-nnoremap <Space> <Nop>
+nnoremap <Space> <nop>
 let g:mapleader = ' '
 
 " Edit `.vimrc` file with <SPACE+,>
