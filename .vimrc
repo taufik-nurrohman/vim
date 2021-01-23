@@ -197,5 +197,5 @@ let g:mapleader = ' '
 " Edit `.vimrc` file with <SPACE+,>
 nmap <silent> <Leader>, :tabedit $MYVIMRC<CR>
 
-" Select all with <SPACE+A>
-nmap <Leader>a ggVG
+" Select all with <SPACE+V>
+nmap <Leader>v ggVG
