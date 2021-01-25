@@ -149,6 +149,9 @@ endfunction
 vmap > >gv^
 vmap < <gv^
 
+" Select all with <V+V>
+vmap v <Esc>ggVG
+
 " Getting back to normal mode after entering visual mode feels so slow.
 " Maybe this is due to a certain plugin. This line solves the problem.
 set ttimeout
@@ -196,6 +199,3 @@ let g:mapleader = ' '
 
 " Edit `.vimrc` file with <SPACE+,>
 nmap <silent> <Leader>, :tabedit $MYVIMRC<CR>
-
-" Select all with <SPACE+V>
-nmap <Leader>v ggVG
