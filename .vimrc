@@ -150,7 +150,8 @@ vmap > >gv^
 vmap < <gv^
 
 " Select all with <V+V>
-vmap v <Esc>ggVG
+vmap v <Esc>gg0vG$
+vmap V <Esc>ggVG
 
 " Getting back to normal mode after entering visual mode feels so slow.
 " Maybe this is due to a certain plugin. This line solves the problem.
