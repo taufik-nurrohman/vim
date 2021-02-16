@@ -173,9 +173,9 @@ tnoremap <C-Down> <C-W>j
 tnoremap <C-Up> <C-W>k
 tnoremap <C-Right> <C-W>l
 
-" Toggle terminal mode with <SHIFT+T>
-nnoremap <silent> <S-T> :term++rows=10<CR>
-tnoremap <silent> <S-T> <C-W>:q!<CR>
+" Toggle terminal mode with <CTRL+T>
+nnoremap <silent> <C-T> :term++rows=10<CR>
+tnoremap <silent> <C-T> <C-W>:q!<CR>
 
 " As alternative, you can also exit terminal mode with <CTRL+D>
 tnoremap <silent> <C-D> <C-W>:q!<CR>
