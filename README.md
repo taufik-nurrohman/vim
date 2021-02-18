@@ -31,6 +31,10 @@ Custom sunburst theme modified from <https://github.com/sickill/vim-sunburst>
 Custom Key Maps
 ---------------
 
+### Insert
+
+_None._
+
 ### Normal
 
 Keys | Function
@@ -48,6 +52,10 @@ Keys | Function
 
  - `VV` to select all with _visual-line_ mode.
  - `vv` to select all with _visual_ mode.
+
+### Visual
+
+_None._
 
 ---
 
