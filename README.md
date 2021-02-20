@@ -39,16 +39,16 @@ _None._
 
 Keys | Function
 ---- | --------
-`<C-Down>` | Move to the down split if any.
-`<C-Left>` | Move to the left split if any.
-`<C-Right>` | Move to the right split if any.
-`<C-Up>` | Move to the up split if any.
-`<C-d>` | Close current window/split.
-`<C-f>` | Find files.
-`<C-l>` | Refresh the screen and remove all search marker if any.
-`<C-n>` | Toggle file tree visibility.
-`<C-t>` | Toggle terminal mode.
-`<Space-,>` | Edit the `.vimrc` file.
+<kbd>⌘</kbd> <kbd>↓</kbd> | Move to the down split if any.
+<kbd>⌘</kbd> <kbd>←</kbd> | Move to the left split if any.
+<kbd>⌘</kbd> <kbd>→</kbd> | Move to the right split if any.
+<kbd>⌘</kbd> <kbd>↑</kbd> | Move to the up split if any.
+<kbd>⌘</kbd> <kbd>d</kbd> | Close current window/split.
+<kbd>⌘</kbd> <kbd>f</kbd> | Find files.
+<kbd>⌘</kbd> <kbd>l</kbd> | Refresh the screen and remove all search marker if any.
+<kbd>⌘</kbd> <kbd>n</kbd> | Toggle file tree visibility.
+<kbd>⌘</kbd> <kbd>t</kbd> | Toggle terminal mode.
+<kbd>␣</kbd> <kbd>,</kbd> | Edit the `.vimrc` file.
 
  - `VV` to select all with _visual-line_ mode.
  - `vv` to select all with _visual_ mode.
