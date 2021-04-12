@@ -21,6 +21,7 @@ Plugins Used
  - [Nerd Tree Visual Selection](https://github.com/PhilRunninger/nerdtree-visual-selection)
  - [Repeat](https://github.com/tpope/vim-repeat)
  - [Simple Complete](https://github.com/maxboisvert/vim-simple-complete)
+ - [Taboo](https://github.com/gcmt/taboo.vim)
  - [Unimpaired](https://github.com/tpope/vim-unimpaired)
 
 Theme Used
