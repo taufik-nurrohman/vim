@@ -14,8 +14,8 @@ if has('gui_running')
   set guioptions-=L " remove left-hand scroll bar
 else
   set t_Co=256
-  set t_AB=^[[48;5;%dm
-  set t_AF=^[[38;5;%dm
+  set t_AB=[48;5;%dm
+  set t_AF=[38;5;%dm
   set term=xterm-256color
 endif
 
