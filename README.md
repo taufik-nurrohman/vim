@@ -12,13 +12,13 @@ Plugins Used
 
  - [Better White-Spaces](https://github.com/ntpeters/vim-better-whitespace)
  - [Bullets](https://github.com/dkarter/bullets.vim)
- - [Commentary](https://github.com/tpope/vim-commentary)
  - [CTRL+P](https://github.com/ctrlpvim/ctrlp.vim)
+ - [Commentary](https://github.com/tpope/vim-commentary)
  - [Last Place](https://github.com/farmergreg/vim-lastplace)
  - [Lexima](https://github.com/cohama/lexima.vim)
- - [Nerd Tree](https://github.com/preservim/nerdtree)
  - [Nerd Tree Unfocus](https://github.com/baopham/vim-nerdtree-unfocus)
  - [Nerd Tree Visual Selection](https://github.com/PhilRunninger/nerdtree-visual-selection)
+ - [Nerd Tree](https://github.com/preservim/nerdtree)
  - [Repeat](https://github.com/tpope/vim-repeat)
  - [Simple Complete](https://github.com/maxboisvert/vim-simple-complete)
  - [Taboo](https://github.com/gcmt/taboo.vim)
@@ -40,15 +40,21 @@ _None._
 
 Keys | Function
 ---- | --------
-<kbd>⌘</kbd> <kbd>d</kbd> | Close current window/split.
-<kbd>⌘</kbd> <kbd>f</kbd> | Find files.
-<kbd>⌘</kbd> <kbd>l</kbd> | Refresh the screen and remove all search marker if any.
-<kbd>⌘</kbd> <kbd>n</kbd> | Toggle file tree visibility.
-<kbd>⌘</kbd> <kbd>t</kbd> | Toggle terminal mode.
-<kbd>⌘</kbd> <kbd>←</kbd> | Move to the left split if any.
-<kbd>⌘</kbd> <kbd>↑</kbd> | Move to the up split if any.
-<kbd>⌘</kbd> <kbd>→</kbd> | Move to the right split if any.
-<kbd>⌘</kbd> <kbd>↓</kbd> | Move to the down split if any.
+<kbd>⌘</kbd> <kbd>d</kbd> | Close current terminal window/split.
+<kbd>⌥</kbd> <kbd>f</kbd> | Find files.
+<kbd>⌥</kbd> <kbd>h</kbd> | Move to the left split if any.
+<kbd>⌥</kbd> <kbd>j</kbd> | Move to the down split if any.
+<kbd>⌥</kbd> <kbd>k</kbd> | Move to the up split if any.
+<kbd>⌥</kbd> <kbd>l</kbd> | Move to the right split if any.
+<kbd>⌥</kbd> <kbd>n</kbd> | Toggle file tree visibility.
+<kbd>⌥</kbd> <kbd>q</kbd> | Close current window/split.
+<kbd>⌥</kbd> <kbd>r</kbd> | Refresh the screen and remove all search marker if any.
+<kbd>⌥</kbd> <kbd>s</kbd> | Save current file.
+<kbd>⌥</kbd> <kbd>t</kbd> | Toggle terminal mode.
+<kbd>⌥</kbd> <kbd>←</kbd> | Move to the left split if any.
+<kbd>⌥</kbd> <kbd>↑</kbd> | Move to the up split if any.
+<kbd>⌥</kbd> <kbd>→</kbd> | Move to the right split if any.
+<kbd>⌥</kbd> <kbd>↓</kbd> | Move to the down split if any.
 <kbd>␣</kbd> <kbd>,</kbd> | Edit the `.vimrc` file.
 
  - `VV` to select all with _visual-line_ mode.
