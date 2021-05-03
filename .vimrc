@@ -250,5 +250,4 @@ nmap <silent> <Leader>, :tabedit $MYVIMRC<CR>
 " Maybe this is due to a certain plugin. These lines solve the problem.
 set timeout
 set ttimeout
-set timeoutlen=100
 set ttimeoutlen=50
