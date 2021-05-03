@@ -40,24 +40,21 @@ _None._
 
 Keys | Function
 ---- | --------
-<kbd>⌘</kbd> <kbd>d</kbd> | Close current terminal window/split.
-<kbd>⌥</kbd> <kbd>f</kbd> | Find files.
-<kbd>⌥</kbd> <kbd>h</kbd> | Move to the left split if any.
-<kbd>⌥</kbd> <kbd>j</kbd> | Move to the down split if any.
-<kbd>⌥</kbd> <kbd>k</kbd> | Move to the up split if any.
-<kbd>⌥</kbd> <kbd>l</kbd> | Move to the right split if any.
-<kbd>⌥</kbd> <kbd>n</kbd> | Toggle file tree visibility.
-<kbd>⌥</kbd> <kbd>q</kbd> | Close current window/split.
-<kbd>⌥</kbd> <kbd>r</kbd> | Refresh the screen and remove all search marker if any.
-<kbd>⌥</kbd> <kbd>s</kbd> | Save current file.
-<kbd>⌥</kbd> <kbd>t</kbd> | Toggle terminal mode.
-<kbd>⌥</kbd> <kbd>←</kbd> | Move to the left split if any.
-<kbd>⌥</kbd> <kbd>↑</kbd> | Move to the up split if any.
-<kbd>⌥</kbd> <kbd>→</kbd> | Move to the right split if any.
-<kbd>⌥</kbd> <kbd>↓</kbd> | Move to the down split if any.
+<kbd>U</kbd> | Redo.
+<kbd>⌘</kbd> <kbd>d</kbd> | Close current window/split.
+<kbd>⌘</kbd> <kbd>h</kbd> | Move to the left split if any.
+<kbd>⌘</kbd> <kbd>j</kbd> | Move to the down split if any.
+<kbd>⌘</kbd> <kbd>k</kbd> | Move to the up split if any.
+<kbd>⌘</kbd> <kbd>l</kbd> | Move to the right split if any.
+<kbd>⌘</kbd> <kbd>n</kbd> | Toggle file tree visibility.
+<kbd>⌘</kbd> <kbd>p</kbd> | Find files.
+<kbd>⌘</kbd> <kbd>r</kbd> | Refresh the screen and remove all search marker if any.
+<kbd>⌘</kbd> <kbd>t</kbd> | Toggle terminal mode.
+<kbd>⌘</kbd> <kbd>←</kbd> | Move to the left split if any.
+<kbd>⌘</kbd> <kbd>↑</kbd> | Move to the up split if any.
+<kbd>⌘</kbd> <kbd>→</kbd> | Move to the right split if any.
+<kbd>⌘</kbd> <kbd>↓</kbd> | Move to the down split if any.
 <kbd>␣</kbd> <kbd>,</kbd> | Edit the `.vimrc` file.
-
-> **Note:** About the <kbd>⌥</kbd> key mapping, it uses escape character as a representation of Meta key, which will not be visible in some text editors, but will be represented as `^[` inside Vim. Please refer to the manual of your terminal on [how to set the Meta key to send escape character](https://wiki.archlinux.org/title/Xterm#Make_'Alt'_key_behave_as_on_other_terminal_emulators).
 
 ### Visual
 

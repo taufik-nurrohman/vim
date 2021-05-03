@@ -1,5 +1,4 @@
 " Modified from <https://github.com/sickill/vim-sunburst>
-" Terminal only. All GUI color definition has been removed.
 " Current Vim version: 8.0
 
 set background=dark
@@ -11,59 +10,59 @@ endif
 
 let g:colors_name = 'sunburst'
 
-hi Normal ctermfg=231 ctermbg=233 cterm=NONE
-hi Visual ctermfg=NONE ctermbg=236 cterm=NONE
+hi Normal ctermfg=231 ctermbg=233 cterm=NONE guifg=#ffffff guibg=#121212 gui=NONE
+hi Visual ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#303030 gui=NONE
 
-hi LineNr ctermfg=244 ctermbg=234 cterm=NONE
-hi NonText ctermfg=236 ctermbg=233 cterm=NONE
+hi LineNr ctermfg=244 ctermbg=234 cterm=NONE guifg=#808080 guibg=#1c1c1c gui=NONE
+hi NonText ctermfg=236 ctermbg=233 cterm=NONE guifg=#303030 guibg=#121212 gui=NONE
 
-hi CursorColumn ctermfg=NONE ctermbg=234 cterm=NONE
-hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE
+hi CursorColumn ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#1c1c1c gui=NONE
+hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#1c1c1c gui=NONE
 
-hi ColorColumn ctermfg=NONE ctermbg=234 cterm=NONE
+hi ColorColumn ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#1c1c1c gui=NONE
 
-hi VertSplit ctermfg=236 ctermbg=233 cterm=NONE
+hi VertSplit ctermfg=236 ctermbg=233 cterm=NONE guifg=#303030 guibg=#121212 gui=NONE
 
-hi StatusLine ctermfg=231 ctermbg=236 cterm=NONE
-hi StatusLineNC ctermfg=246 ctermbg=236 cterm=NONE
-hi StatusLineTerm ctermfg=233 ctermbg=244 cterm=NONE
-hi StatusLineTermNC ctermfg=233 ctermbg=244 cterm=NONE
+hi StatusLine ctermfg=231 ctermbg=236 cterm=NONE guifg=#ffffff guibg=#303030 gui=NONE
+hi StatusLineNC ctermfg=246 ctermbg=236 cterm=NONE guifg=#949494 guibg=#303030 gui=NONE
+hi StatusLineTerm ctermfg=233 ctermbg=244 cterm=NONE guifg=#121212 guibg=#808080 gui=NONE
+hi StatusLineTermNC ctermfg=233 ctermbg=244 cterm=NONE  guifg=#121212 guibg=#808080 gui=NONE
 
-hi ErrorMsg ctermfg=203 ctermbg=NONE
-hi ModeMsg ctermfg=95 ctermbg=NONE cterm=bold
-hi WarningMsg ctermfg=221 ctermbg=NONE
+hi ErrorMsg ctermfg=203 ctermbg=NONE cterm=NONE guifg=#ff5f5f guibg=NONE gui=NONE
+hi ModeMsg ctermfg=95 ctermbg=NONE cterm=bold guifg=#875f5f guibg=NONE gui=bold
+hi WarningMsg ctermfg=221 ctermbg=NONE cterm=NONE guifg=#ffd75f guibg=NONE gui=NONE
 
-hi Question ctermfg=150 ctermbg=NONE
+hi Question ctermfg=150 ctermbg=NONE cterm=NONE guifg=#afd787 guibg=NONE gui=NONE
 
-hi TabLine ctermfg=246 ctermbg=236 cterm=NONE
-hi TabLineFill ctermfg=246 ctermbg=236 cterm=NONE
-hi TabLineSel ctermfg=231 ctermbg=233 cterm=NONE
+hi TabLine ctermfg=246 ctermbg=236 cterm=NONE guifg=#949494 guibg=#303030 gui=NONE
+hi TabLineFill ctermfg=246 ctermbg=236 cterm=NONE guifg=#949494 guibg=#303030 gui=NONE
+hi TabLineSel ctermfg=231 ctermbg=233 cterm=NONE guifg=#ffffff guibg=#121212 gui=NONE
 
-hi Pmenu ctermfg=111 ctermbg=234 cterm=NONE
-hi PmenuSel ctermfg=111 ctermbg=236 cterm=NONE
+hi Pmenu ctermfg=111 ctermbg=234 cterm=NONE guifg=#87afff guibg=#1c1c1c gui=NONE
+hi PmenuSel ctermfg=111 ctermbg=236 cterm=NONE guifg=#87afff guibg=#303030 gui=NONE
 
-hi IncSearch ctermfg=234 ctermbg=228 cterm=NONE
-hi Search ctermfg=234 ctermbg=228 cterm=NONE
+hi IncSearch ctermfg=234 ctermbg=228 cterm=NONE guifg=#1c1c1c guibg=#ffff87 gui=NONE
+hi Search ctermfg=234 ctermbg=228 cterm=NONE guifg=#1c1c1c guibg=#ffff87 gui=NONE
 
-hi Folded ctermfg=249 ctermbg=0 cterm=NONE
-hi MatchParen ctermfg=NONE ctermbg=236 cterm=NONE
+hi Folded ctermfg=250 ctermbg=0 cterm=NONE guifg=#b2b2b2 guibg=#000000 gui=NONE
+hi MatchParen ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#303030 gui=NONE
 
-hi Comment ctermfg=249 ctermbg=NONE cterm=NONE
-hi Constant ctermfg=68 ctermbg=NONE cterm=NONE
-hi Directory ctermfg=68 ctermbg=NONE cterm=NONE
-hi Error ctermfg=233 ctermbg=203 cterm=NONE
-hi Function ctermfg=111 ctermbg=NONE cterm=NONE
-hi Identifier ctermfg=113 ctermbg=NONE cterm=NONE
-hi PreProc ctermfg=173 ctermbg=NONE cterm=NONE
-hi Special ctermfg=231 ctermbg=NONE cterm=NONE
-hi SpecialChar ctermfg=103 ctermbg=NONE cterm=NONE
-hi Statement ctermfg=173 ctermbg=NONE cterm=NONE
+hi Comment ctermfg=249 ctermbg=NONE cterm=NONE guifg=#b2b2b2 guibg=NONE gui=NONE
+hi Constant ctermfg=68 ctermbg=NONE cterm=NONE guifg=#5f87d7 guibg=NONE gui=NONE
+hi Directory ctermfg=68 ctermbg=NONE cterm=NONE guifg=#5f87d7 guibg=NONE gui=NONE
+hi Error ctermfg=233 ctermbg=203 cterm=NONE guifg=#121212 guibg=#ff5f5f gui=NONE
+hi Function ctermfg=111 ctermbg=NONE cterm=NONE guifg=#87afff guibg=NONE gui=NONE
+hi Identifier ctermfg=113 ctermbg=NONE cterm=NONE guifg=#87d75f guibg=NONE gui=NONE
+hi PreProc ctermfg=173 ctermbg=NONE cterm=NONE guifg=#d7875f guibg=NONE gui=NONE
+hi Special ctermfg=231 ctermbg=NONE cterm=NONE guifg=#ffffff guibg=NONE gui=NONE
+hi SpecialChar ctermfg=103 ctermbg=NONE cterm=NONE guifg=#8787af guibg=NONE gui=NONE
+hi Statement ctermfg=173 ctermbg=NONE cterm=NONE guifg=#d7875f guibg=NONE gui=NONE
 
-hi String ctermfg=71 ctermbg=NONE cterm=NONE
-hi Title ctermfg=231 ctermbg=NONE cterm=bold
-hi Todo ctermfg=249 ctermbg=NONE cterm=inverse,bold
-hi Type ctermfg=111 ctermbg=NONE cterm=NONE
-hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline
+hi String ctermfg=71 ctermbg=NONE cterm=NONE guifg=#5faf5f guibg=NONE gui=NONE
+hi Title ctermfg=231 ctermbg=NONE cterm=bold guifg=#ffffff guibg=NONE gui=bold
+hi Todo ctermfg=249 ctermbg=NONE cterm=inverse,bold guifg=#b2b2b2 guibg=NONE gui=inverse,bold
+hi Type ctermfg=111 ctermbg=NONE cterm=NONE guifg=#87afff guibg=NONE gui=NONE
+hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 
 " *
 hi link Define Statement

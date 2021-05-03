@@ -7,11 +7,39 @@ set nocompatible
 set titlestring=%F
 
 if has('gui_running')
-  autocmd GUIEnter * simalt ~x
+  set clipboard=unnamed
+  " autocmd GUIEnter * simalt ~x
   set guioptions-=m " remove menu bar
   set guioptions-=T " rmove tool bar
   set guioptions-=r " remove right-hand scroll bar
   set guioptions-=L " remove left-hand scroll bar
+  " Copy with <CTRL+C>
+  imap <C-c> <Esc>yyi
+  nmap <C-c> yy
+  vmap <C-c> "+yi
+  " Cut with <CTRL+X>
+  imap <C-x> <Esc>ddi
+  nmap <C-x> dd
+  vmap <C-x> "+c
+  " Find with <CTRL+F>
+  imap <C-f> <Esc>/
+  nmap <C-f> /
+  vmap <C-f> <Esc>/
+  " Paste with <CTRL+V>
+  imap <C-v> <C-r><C-o>+
+  vmap <C-v> c<Esc>"+p
+  " Redo with <CTRL+Y>
+  imap <C-y> <Esc><C-r>
+  nmap <C-y> <C-r>
+  vmap <C-y> <Esc><C-r>
+  " Save with <CTRL+S>
+  imap <C-s> <Esc>:w<CR>
+  nmap <C-s> :w<CR>
+  vmap <C-s> <Esc>:w<CR>
+  " Undo with <CTRL+Z>
+  imap <C-z> <Esc>ua
+  nmap <C-z> u
+  vmap <C-z> <Esc>u
 else
   set t_Co=256
   set t_AB=[48;5;%dm
@@ -158,52 +186,51 @@ vmap v <Esc>gg0vG$
 vmap V <Esc>ggVG
 
 
-" === Begin <ALT> Key Maps ===
-" Make sure that your terminal configures Meta key to send escape!
+" === Begin <C> Key Maps ===
 
-" Toggle `NERDTree` with <ALT+N>
-nmap <silent> n :NERDTreeToggle<CR>
-" Clear search marker and reload color scheme with <ALT+R>
-nnoremap <silent> r :nohlsearch <bar> call ReloadColorScheme()<CR><Esc>
+" Toggle `NERDTree` with <CTRL+N>
+nmap <silent> <C-n> :NERDTreeToggle<CR>
+" Clear search marker and reload color scheme with <CTRL+R>
+nnoremap <silent> <C-r> :nohlsearch <bar> call ReloadColorScheme()<CR><Esc>
 function! ReloadColorScheme()
   exec 'colorscheme ' . g:skin
 endfunction
-" Navigate between split(s) with <ALT+LEFT/DOWN/UP/RIGHT>
-nnoremap [1;3D <C-W>h
-nnoremap [1;3B <C-W>j
-nnoremap [1;3A <C-W>k
-nnoremap [1;3C <C-W>l
-" Navigate between split(s) with <ALT+H/J/K/L>
-nnoremap h <C-W>h
-nnoremap j <C-W>j
-nnoremap k <C-W>k
-nnoremap l <C-W>l
-" Navigate to other split(s) from terminal with <ALT+LEFT/DOWN/UP/RIGHT>
-tnoremap [1;3D <C-W>h
-tnoremap [1;3B <C-W>j
-tnoremap [1;3A <C-W>k
-tnoremap [1;3C <C-W>l
-" Navigate to other split(s) from terminal with <ALT+H/J/K/L>
-tnoremap h <C-W>h
-tnoremap j <C-W>j
-tnoremap k <C-W>k
-tnoremap l <C-W>l
-" Toggle terminal mode with <ALT+T>
-nnoremap <silent> t :term++rows=10<CR>
-tnoremap <silent> t <C-W>:q!<CR>
+" Redo with <SHIFT+U>
+nnoremap U <C-r>
+" Navigate between split(s) with <CTRL+LEFT/DOWN/UP/RIGHT>
+nnoremap <C-Left> <C-w>h
+nnoremap <C-Down> <C-w>j
+nnoremap <C-Up> <C-w>k
+nnoremap <C-Right> <C-w>l
+" Navigate between split(s) with <CTRL+H/J/K/L>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+" Navigate to other split(s) from terminal with <CTRL+LEFT/DOWN/UP/RIGHT>
+tnoremap <C-Left> <C-w>h
+tnoremap <C-Down> <C-w>j
+tnoremap <C-Up> <C-w>k
+tnoremap <C-Right> <C-w>l
+" Navigate to other split(s) from terminal with <CTRL+H/J/K/L>
+tnoremap <C-h> <C-w>h
+tnoremap <C-j> <C-w>j
+tnoremap <C-k> <C-w>k
+tnoremap <C-l> <C-w>l
+" Toggle terminal mode with <CTRL+T>
+nnoremap <silent> <C-t> :term++rows=10<CR>
+tnoremap <silent> <C-t> <C-w>:q!<CR>
 " As alternative, you can also exit terminal mode with <CTRL+D>
-tnoremap <silent> <C-D> <C-W>:q!<CR>
-" Save with <ALT-S>
-nnoremap <silent> s :w<CR>
-" Quit with <ALT-Q>
-nnoremap <silent> q :q!<CR>
+tnoremap <silent> <C-d> <C-w>:q!<CR>
+" Quit with <CTRL-D>
+nnoremap <silent> <C-d> :q!<CR>
 let g:ctrlp_brief_prompt = 1
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_map = 'f'
+let g:ctrlp_map = '<C-p>'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_types = ['fil', 'buf']
 
-" === End <ALT> Key Maps ===
+" === End <C> Key Maps ===
 
 
 " === Begin <Leader> Key Maps ===
