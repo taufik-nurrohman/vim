@@ -14,13 +14,13 @@ if has('gui_running')
   set guioptions-=r " remove right-hand scroll bar
   set guioptions-=L " remove left-hand scroll bar
   " Copy with <CTRL+C>
-  imap <C-c> <Esc>yyi
-  nmap <C-c> yy
-  vmap <C-c> "+yi
+  imap <C-c> <Esc>V"+y
+  nmap <C-c> V"+y
+  vmap <C-c> "+y
   " Cut with <CTRL+X>
-  imap <C-x> <Esc>ddi
-  nmap <C-x> dd
-  vmap <C-x> "+c
+  imap <C-x> <Esc>V"+d
+  nmap <C-x> V"+d
+  vmap <C-x> "+d
   " Find with <CTRL+F>
   imap <C-f> <Esc>/
   nmap <C-f> /
