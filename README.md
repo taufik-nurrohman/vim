@@ -57,14 +57,19 @@ Keys | Function
 <kbd>⌥</kbd> <kbd>↓</kbd> | Move to the down split if any.
 <kbd>␣</kbd> <kbd>,</kbd> | Edit the `.vimrc` file.
 
- - `VV` to select all with _visual-line_ mode.
- - `vv` to select all with _visual_ mode.
-
 > **Note:** About the <kbd>⌥</kbd> key mapping, it uses escape character as a representation of Meta key, which will not be visible in some text editors, but will be represented as `^[` inside Vim. Please refer to the manual of your terminal on [how to set the Meta key to send escape character](https://wiki.archlinux.org/title/Xterm#Make_'Alt'_key_behave_as_on_other_terminal_emulators).
 
 ### Visual
 
-_None._
+Keys | Function
+---- | --------
+<kbd>v</kbd> | Select all with _visual_ mode.
+
+### Visual-Line
+
+Keys | Function
+---- | --------
+<kbd>V</kbd> | Select all with _visual-line_ mode.
 
 ---
 
