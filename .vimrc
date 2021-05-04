@@ -225,6 +225,7 @@ tnoremap <silent> <C-t> <C-w>:q!<CR>
 tnoremap <silent> <C-d> <C-w>:q!<CR>
 " Quit with <CTRL+D>
 nnoremap <silent> <C-d> :q!<CR>
+
 let g:ctrlp_brief_prompt = 1
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_map = '<C-p>'
