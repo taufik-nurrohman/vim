@@ -9,10 +9,10 @@ set titlestring=%F
 if has('gui_running')
   set clipboard=unnamed
   " autocmd GUIEnter * simalt ~x
-  set guioptions-=m " remove menu bar
-  set guioptions-=T " rmove tool bar
-  set guioptions-=r " remove right-hand scroll bar
-  set guioptions-=L " remove left-hand scroll bar
+  set guioptions-=m " Remove menu bar
+  set guioptions-=T " Remove tool bar
+  set guioptions-=r " Remove right scroll bar
+  set guioptions-=L " Remove left scroll bar
   " Copy with <CTRL+C>
   imap <C-c> <Esc>V"+y
   nmap <C-c> V"+y
@@ -181,6 +181,9 @@ autocmd InsertLeave * :let @/=get(b:,'_search','')
 vmap > >gv^
 vmap < <gv^
 
+" Redo with <SHIFT+U>
+nnoremap U <C-r>
+
 " Select all with <V+V>
 vmap v <Esc>gg0vG$
 vmap V <Esc>ggVG
@@ -195,8 +198,6 @@ nnoremap <silent> <C-r> :nohlsearch <bar> call ReloadColorScheme()<CR><Esc>
 function! ReloadColorScheme()
   exec 'colorscheme ' . g:skin
 endfunction
-" Redo with <SHIFT+U>
-nnoremap U <C-r>
 " Navigate between split(s) with <CTRL+LEFT/DOWN/UP/RIGHT>
 nnoremap <C-Left> <C-w>h
 nnoremap <C-Down> <C-w>j
@@ -222,7 +223,7 @@ nnoremap <silent> <C-t> :term++rows=10<CR>
 tnoremap <silent> <C-t> <C-w>:q!<CR>
 " As alternative, you can also exit terminal mode with <CTRL+D>
 tnoremap <silent> <C-d> <C-w>:q!<CR>
-" Quit with <CTRL-D>
+" Quit with <CTRL+D>
 nnoremap <silent> <C-d> :q!<CR>
 let g:ctrlp_brief_prompt = 1
 let g:ctrlp_cmd = 'CtrlP'
