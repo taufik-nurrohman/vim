@@ -13,33 +13,37 @@ if has('gui_running')
   set guioptions-=T " Remove tool bar
   set guioptions-=r " Remove right scroll bar
   set guioptions-=L " Remove left scroll bar
+  " Select all with <CTRL+A>
+  inoremap <C-a> <Esc>gg0vG$
+  nnoremap <C-a> gg0vG$
+  vnoremap <C-a> <Esc>gg0vG$
   " Copy with <CTRL+C>
-  imap <C-c> <Esc>V"+y
-  nmap <C-c> V"+y
-  vmap <C-c> "+y
+  inoremap <C-c> <Esc>V"+y
+  nnoremap <C-c> V"+y
+  vnoremap <C-c> "+y
   " Cut with <CTRL+X>
-  imap <C-x> <Esc>V"+d
-  nmap <C-x> V"+d
-  vmap <C-x> "+d
+  inoremap <C-x> <Esc>V"+c
+  nnoremap <C-x> V"+c
+  vnoremap <C-x> "+c
   " Find with <CTRL+F>
-  imap <C-f> <Esc>/
-  nmap <C-f> /
-  vmap <C-f> <Esc>/
+  inoremap <C-f> <Esc>/
+  nnoremap <C-f> /
+  vnoremap <C-f> <Esc>/
   " Paste with <CTRL+V>
-  imap <C-v> <C-r><C-o>+
-  vmap <C-v> c<Esc>"+p
+  inoremap <C-v> <C-r><C-o>+
+  vnoremap <C-v> c<Esc>"+p
   " Redo with <CTRL+Y>
-  imap <C-y> <Esc><C-r>
-  nmap <C-y> <C-r>
-  vmap <C-y> <Esc><C-r>
+  inoremap <C-y> <Esc><C-r>
+  nnoremap <C-y> <C-r>
+  vnoremap <C-y> <Esc><C-r>
   " Save with <CTRL+S>
-  imap <C-s> <Esc>:w<CR>
-  nmap <C-s> :w<CR>
-  vmap <C-s> <Esc>:w<CR>
+  inoremap <C-s> <Esc>:w<CR>
+  nnoremap <C-s> :w<CR>
+  vnoremap <C-s> <Esc>:w<CR>
   " Undo with <CTRL+Z>
-  imap <C-z> <Esc>ua
-  nmap <C-z> u
-  vmap <C-z> <Esc>u
+  inoremap <C-z> <Esc>ua
+  nnoremap <C-z> u
+  vnoremap <C-z> <Esc>u
 else
   set t_Co=256
   set t_AB=[48;5;%dm
@@ -178,21 +182,21 @@ autocmd InsertEnter * :let b:_search=@/ | let @/=''
 autocmd InsertLeave * :let @/=get(b:,'_search','')
 
 " Preserve visual block selection after indent/outdent
-vmap > >gv^
-vmap < <gv^
+vnoremap > >gv^
+vnoremap < <gv^
 
 " Redo with <SHIFT+U>
 nnoremap U <C-r>
 
 " Select all with <V+V>
-vmap v <Esc>gg0vG$
-vmap V <Esc>ggVG
+vnoremap v <Esc>gg0vG$
+vnoremap V <Esc>ggVG
 
 
 " === Begin <C> Key Maps ===
 
 " Toggle `NERDTree` with <CTRL+N>
-nmap <silent> <C-n> :NERDTreeToggle<CR>
+nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 " Clear search marker and reload color scheme with <CTRL+R>
 nnoremap <silent> <C-r> :nohlsearch <bar> call ReloadColorScheme()<CR><Esc>
 function! ReloadColorScheme()
@@ -241,9 +245,9 @@ let g:ctrlp_types = ['fil', 'buf']
 nnoremap <Space> <nop>
 let g:mapleader = ' '
 " New tab with <SPACE+T>
-nmap <silent> <Leader>t :tabnew<CR>
+nnoremap <silent> <Leader>t :tabnew<CR>
 " Edit `.vimrc` file with <SPACE+,>
-nmap <silent> <Leader>, :tabedit $MYVIMRC<CR>
+nnoremap <silent> <Leader>, :tabedit $MYVIMRC<CR>
 
 " === End <Leader> Key Maps ===
 
