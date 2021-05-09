@@ -4,6 +4,8 @@
 set title
 set nocompatible
 
+set backspace=indent,eol,start
+
 set titlestring=%F
 
 if has('gui_running')
