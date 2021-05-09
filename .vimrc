@@ -9,6 +9,8 @@ set titlestring=%F
 if has('gui_running')
   set clipboard=unnamed
   " autocmd GUIEnter * simalt ~x
+  set guioptions-=L " Remove left scroll bar
+  set guioptions-=R " Remove right scroll bar
   set guioptions-=T " Remove tool bar
   set guioptions-=e " Remove tab bar
   set guioptions-=l " Remove left scroll bar
