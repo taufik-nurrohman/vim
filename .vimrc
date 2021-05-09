@@ -238,6 +238,8 @@ nnoremap <silent> <C-d> :q!<CR>
 let g:ctrlp_brief_prompt = 1
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_map = '<C-p>'
+let g:ctrlp_max_depth = 40
+let g:ctrlp_max_files = 0
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_types = ['fil', 'buf']
 
