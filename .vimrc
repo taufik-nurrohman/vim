@@ -9,41 +9,42 @@ set titlestring=%F
 if has('gui_running')
   set clipboard=unnamed
   " autocmd GUIEnter * simalt ~x
-  set guioptions-=m " Remove menu bar
   set guioptions-=T " Remove tool bar
+  set guioptions-=e " Remove tab bar
+  set guioptions-=l " Remove left scroll bar
+  set guioptions-=m " Remove menu bar
   set guioptions-=r " Remove right scroll bar
-  set guioptions-=L " Remove left scroll bar
-  " Select all with <CTRL+A>
-  inoremap <C-a> <Esc>gg0vG$
-  nnoremap <C-a> gg0vG$
-  vnoremap <C-a> <Esc>gg0vG$
-  " Copy with <CTRL+C>
-  inoremap <C-c> <Esc>V"+y
-  nnoremap <C-c> V"+y
-  vnoremap <C-c> "+y
-  " Cut with <CTRL+X>
-  inoremap <C-x> <Esc>V"+c
-  nnoremap <C-x> V"+c
-  vnoremap <C-x> "+c
-  " Find with <CTRL+F>
-  inoremap <C-f> <Esc>/
-  nnoremap <C-f> /
-  vnoremap <C-f> <Esc>/
-  " Paste with <CTRL+V>
-  inoremap <C-v> <C-r><C-o>+
-  vnoremap <C-v> c<Esc>"+p
-  " Redo with <CTRL+Y>
-  inoremap <C-y> <Esc><C-r>
-  nnoremap <C-y> <C-r>
-  vnoremap <C-y> <Esc><C-r>
+  " " Select all with <CTRL+A>
+  " inoremap <C-a> <Esc>gg0vG$
+  " nnoremap <C-a> gg0vG$
+  " vnoremap <C-a> <Esc>gg0vG$
+  " " Copy with <CTRL+C>
+  " inoremap <C-c> <Esc>V"+y
+  " nnoremap <C-c> V"+y
+  " vnoremap <C-c> "+y
+  " " Find with <CTRL+F>
+  " inoremap <C-f> <Esc>/
+  " nnoremap <C-f> /
+  " vnoremap <C-f> <Esc>/
   " Save with <CTRL+S>
   inoremap <C-s> <Esc>:w<CR>
   nnoremap <C-s> :w<CR>
   vnoremap <C-s> <Esc>:w<CR>
-  " Undo with <CTRL+Z>
-  inoremap <C-z> <Esc>ua
-  nnoremap <C-z> u
-  vnoremap <C-z> <Esc>u
+  " " Paste with <CTRL+V>
+  " inoremap <C-v> <C-r><C-o>+
+  " vnoremap <C-v> c<Esc>"+p
+  " " Cut with <CTRL+X>
+  " inoremap <C-x> <Esc>V"+c
+  " nnoremap <C-x> V"+c
+  " vnoremap <C-x> "+c
+  " " Redo with <CTRL+Y>
+  " inoremap <C-y> <Esc><C-r>
+  " nnoremap <C-y> <C-r>
+  " vnoremap <C-y> <Esc><C-r>
+  " " Undo with <CTRL+Z>
+  " inoremap <C-z> <Esc>ua
+  " nnoremap <C-z> u
+  " vnoremap <C-z> <Esc>u
 else
   set t_Co=256
   set t_AB=[48;5;%dm
