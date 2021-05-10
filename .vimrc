@@ -4,7 +4,7 @@
 set title
 set nocompatible
 
-set backspace=indent,eol,start
+set backspace=eol,indent,start
 
 set titlestring=%F
 
