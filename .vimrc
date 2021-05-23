@@ -95,10 +95,13 @@ set smartcase
 autocmd CmdWinEnter * set nomagic
 autocmd CmdWinLeave * set magic
 
-" Indent with 2 space(s)
-set softtabstop=2
-set tabstop=2
-set shiftwidth=2
+" Indent with 4 space(s)
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
+
+" Indent with 2 space(s) for specific file type(s)
+autocmd FileType css,html,jade,json,pug,scss,sgml,xml,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
 
 " Open split(s) to the bottom and/or right
 set splitbelow
