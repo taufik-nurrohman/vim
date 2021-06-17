@@ -10,7 +10,9 @@ set titlestring=%F
 
 if has('gui_running')
   set clipboard=unnamed
-  " autocmd GUIEnter * simalt ~x
+  if (has('win16') || has('win32') || has('win64'))
+    autocmd GUIEnter * simalt ~x
+  endif
   set guioptions-=L " Remove left scroll bar
   set guioptions-=R " Remove right scroll bar
   set guioptions-=T " Remove tool bar
@@ -154,7 +156,7 @@ let g:NERDTreeStatusline = ' '
 let g:NERDTreeShowHidden = 1
 
 " Hide these file(s) from the tree
-set wildignore+=*.DS_Store,*.class,*.hg,*.o,*.obj,*.pyc,*.svn,*.swp
+set wildignore+=*.DS_Store,*.class,*.hg,*.o,*.obj,*.pyc,*.svn
 set wildignore+=.git,composer.lock,node_modules,package-lock.json
 let g:NERDTreeRespectWildIgnore = 1
 
