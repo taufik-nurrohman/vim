@@ -6,7 +6,7 @@ set nocompatible
 
 set backspace=eol,indent,start
 
-set titlestring=%F
+set titlestring=%t
 
 if has('gui_running')
   set clipboard=unnamed
