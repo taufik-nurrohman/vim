@@ -279,20 +279,21 @@ nnoremap <silent> <Leader>, :tabedit $MYVIMRC<CR>
 " === Begin Plugin Manager ===
 
 call plug#begin('~/.vim/pack/vendor/start')
-  Plug 'PhilRunninger/nerdtree-visual-selection', { 'as': 'nerdtree-visual-selection', 'tag': '*' }
-  Plug 'alvan/vim-closetag', { 'as': 'closetag', 'tag': '*' }
-  Plug 'baopham/vim-nerdtree-unfocus', { 'as': 'nerdtree-unfocus', 'tag': '*' }
-  Plug 'cohama/lexima.vim', { 'as': 'lexima', 'tag': '*' }
-  Plug 'ctrlpvim/ctrlp.vim', { 'as': 'ctrlp', 'tag': '*' }
-  Plug 'dkarter/bullets.vim', { 'as': 'bullets', 'tag': '*' }
-  Plug 'farmergreg/vim-lastplace', { 'as': 'lastplace', 'tag': '*' }
-  Plug 'gcmt/taboo.vim', { 'as': 'taboo', 'tag': '*' }
-  Plug 'maxboisvert/vim-simple-complete', { 'as': 'simple-complete', 'tag': '*' }
-  Plug 'ntpeters/vim-better-whitespace', { 'as': 'better-whitespace', 'tag': '*' }
-  Plug 'preservim/nerdtree', { 'as': 'nerdtree', 'tag': '*' }
-  Plug 'tpope/vim-commentary', { 'as': 'commentary', 'tag': '*' }
-  Plug 'tpope/vim-repeat', { 'as': 'repeat', 'tag': '*' }
-  Plug 'tpope/vim-unimpaired', { 'as': 'unimpaired', 'tag': '*' }
+  Plug 'PhilRunninger/nerdtree-visual-selection', { 'as': 'nerdtree-visual-selection' }
+  Plug 'alvan/vim-closetag', { 'as': 'closetag' }
+  Plug 'baopham/vim-nerdtree-unfocus', { 'as': 'nerdtree-unfocus' }
+  Plug 'cohama/lexima.vim', { 'as': 'lexima' }
+  Plug 'ctrlpvim/ctrlp.vim', { 'as': 'ctrlp' }
+  Plug 'dkarter/bullets.vim', { 'as': 'bullets' }
+  Plug 'farmergreg/vim-lastplace', { 'as': 'lastplace' }
+  Plug 'gcmt/taboo.vim', { 'as': 'taboo' }
+  Plug 'maxboisvert/vim-simple-complete', { 'as': 'simple-complete' }
+  Plug 'ntpeters/vim-better-whitespace', { 'as': 'better-whitespace' }
+  Plug 'preservim/nerdtree', { 'as': 'nerdtree' }
+  Plug 'tpope/vim-commentary', { 'as': 'commentary' }
+  Plug 'tpope/vim-repeat', { 'as': 'repeat' }
+  Plug 'tpope/vim-surround', { 'as': 'surround' }
+  Plug 'tpope/vim-unimpaired', { 'as': 'unimpaired' }
 call plug#end()
 
 " === End Plugin Manager ===

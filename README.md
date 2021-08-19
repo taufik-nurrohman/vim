@@ -22,6 +22,7 @@ Plugins Used
  - [Nerd Tree](https://github.com/preservim/nerdtree)
  - [Repeat](https://github.com/tpope/vim-repeat)
  - [Simple Complete](https://github.com/maxboisvert/vim-simple-complete)
+ - [Surround](https://github.com/tpope/vim-surround)
  - [Taboo](https://github.com/gcmt/taboo.vim)
  - [Unimpaired](https://github.com/tpope/vim-unimpaired)
 
