@@ -55,6 +55,10 @@ Keys | Function
 <kbd>⌘</kbd> <kbd>↑</kbd> | Move to the up split if any.
 <kbd>⌘</kbd> <kbd>→</kbd> | Move to the right split if any.
 <kbd>⌘</kbd> <kbd>↓</kbd> | Move to the down split if any.
+<kbd>⌥</kbd> <kbd>j</kbd> | Move line down.
+<kbd>⌥</kbd> <kbd>k</kbd> | Move line up.
+<kbd>⌥</kbd> <kbd>↑</kbd> | Move line up.
+<kbd>⌥</kbd> <kbd>↓</kbd> | Move line down.
 <kbd>␣</kbd> <kbd>,</kbd> | Edit the `.vim/vimrc` file.
 
 ### Visual
@@ -62,12 +66,20 @@ Keys | Function
 Keys | Function
 ---- | --------
 <kbd>v</kbd> | Select all with _visual_ mode.
+<kbd>⌥</kbd> <kbd>j</kbd> | Move line down.
+<kbd>⌥</kbd> <kbd>k</kbd> | Move line up.
+<kbd>⌥</kbd> <kbd>↑</kbd> | Move line up.
+<kbd>⌥</kbd> <kbd>↓</kbd> | Move line down.
 
 ### Visual-Line
 
 Keys | Function
 ---- | --------
 <kbd>V</kbd> | Select all with _visual-line_ mode.
+<kbd>⌥</kbd> <kbd>j</kbd> | Move line down.
+<kbd>⌥</kbd> <kbd>k</kbd> | Move line up.
+<kbd>⌥</kbd> <kbd>↑</kbd> | Move line up.
+<kbd>⌥</kbd> <kbd>↓</kbd> | Move line down.
 
 ---
 
