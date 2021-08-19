@@ -13,6 +13,7 @@ Plugins Used
  - [Better White-Spaces](https://github.com/ntpeters/vim-better-whitespace)
  - [Bullets](https://github.com/dkarter/bullets.vim)
  - [CTRL+P](https://github.com/ctrlpvim/ctrlp.vim)
+ - [Close Tag](https://github.com/alvan/vim-closetag)
  - [Commentary](https://github.com/tpope/vim-commentary)
  - [Last Place](https://github.com/farmergreg/vim-lastplace)
  - [Lexima](https://github.com/cohama/lexima.vim)
@@ -54,7 +55,7 @@ Keys | Function
 <kbd>⌘</kbd> <kbd>↑</kbd> | Move to the up split if any.
 <kbd>⌘</kbd> <kbd>→</kbd> | Move to the right split if any.
 <kbd>⌘</kbd> <kbd>↓</kbd> | Move to the down split if any.
-<kbd>␣</kbd> <kbd>,</kbd> | Edit the `.vimrc` file.
+<kbd>␣</kbd> <kbd>,</kbd> | Edit the `.vim/vimrc` file.
 
 ### Visual
 

@@ -1,6 +1,7 @@
 " Maintained by Taufik Nurrohman
 " <https://taufik-nurrohman.com>
 
+
 set title
 set nocompatible
 
@@ -133,8 +134,8 @@ set background=dark
 exec 'colorscheme ' . g:skin
 
 let g:NERDTreeDirArrows = 1
-let g:NERDTreeDirArrowExpandable = '+'
-let g:NERDTreeDirArrowCollapsible = '-'
+let g:NERDTreeDirArrowExpandable = '▶'
+let g:NERDTreeDirArrowCollapsible = '▼'
 
 " Hide help text and up level description
 " To up one level directory, press <U>
@@ -145,31 +146,32 @@ let g:NERDTreeMinimalMenu = 1
 
 " Allow to use the mouse click to open file/folder
 " let g:NERDTreeMouseMode = 3
-
 " Disable `NERDTree` status line
 let g:NERDTreeStatusline = ' '
 
 " Close `NERDTree` on file open
 " let g:NERDTreeQuitOnOpen = 1
-
 " Show hidden file(s)
 let g:NERDTreeShowHidden = 1
 
 " Hide these file(s) from the tree
 set wildignore+=*.DS_Store,*.class,*.hg,*.o,*.obj,*.pyc,*.svn
-set wildignore+=.git,composer.lock,node_modules,package-lock.json
+set wildignore+=.git,composer.lock,package-lock.json
 let g:NERDTreeRespectWildIgnore = 1
 
 " Put `NERDTree` to the left
 let g:NERDTreeWinPos = 'left'
 let g:NERDTreeWinSize = 30
 
+" Automatically delete buffer of the deleted file
+let g:NERDTreeAutoDeleteBuffer = 1
+
 " Dummy variable
 autocmd StdInReadPre * let s:std_in = 1
 " Automatically open `NERDTree` when Vim starts up
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | else | NERDTree % | wincmd p | endif
 " Automatically close `NERDTree` on last file close
-autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | q | endif
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | q | endif
 
 " Buggy :(
 let g:strip_whitespace_on_save = 1
@@ -182,6 +184,9 @@ autocmd VimEnter * EnableStripWhitespaceOnSave
 autocmd InsertEnter * setlocal noruler
 " Reactivate ruler on leaving the insert mode
 autocmd InsertLeave * setlocal ruler
+
+" Force to hide line number in terminal even in normal mode
+autocmd TerminalOpen * setlocal nonumber norelativenumber
 
 " Clear search marker on entering the insert mode
 autocmd InsertEnter * :let b:_search=@/ | let @/=''
@@ -259,6 +264,28 @@ nnoremap <silent> <Leader>t :tabnew<CR>
 nnoremap <silent> <Leader>, :tabedit $MYVIMRC<CR>
 
 " === End <Leader> Key Maps ===
+
+
+" === Begin Plugin Manager ===
+
+call plug#begin('~/.vim/pack/vendor/start')
+  Plug 'PhilRunninger/nerdtree-visual-selection', { 'as': 'nerdtree-visual-selection', 'tag': '*' }
+  Plug 'alvan/vim-closetag', { 'as': 'closetag', 'tag': '*' }
+  Plug 'baopham/vim-nerdtree-unfocus', { 'as': 'nerdtree-unfocus', 'tag': '*' }
+  Plug 'cohama/lexima.vim', { 'as': 'lexima', 'tag': '*' }
+  Plug 'ctrlpvim/ctrlp.vim', { 'as': 'ctrlp', 'tag': '*' }
+  Plug 'dkarter/bullets.vim', { 'as': 'bullets', 'tag': '*' }
+  Plug 'farmergreg/vim-lastplace', { 'as': 'lastplace', 'tag': '*' }
+  Plug 'gcmt/taboo.vim', { 'as': 'taboo', 'tag': '*' }
+  Plug 'maxboisvert/vim-simple-complete', { 'as': 'simple-complete', 'tag': '*' }
+  Plug 'ntpeters/vim-better-whitespace', { 'as': 'better-whitespace', 'tag': '*' }
+  Plug 'preservim/nerdtree', { 'as': 'nerdtree', 'tag': '*' }
+  Plug 'tpope/vim-commentary', { 'as': 'commentary', 'tag': '*' }
+  Plug 'tpope/vim-repeat', { 'as': 'repeat', 'tag': '*' }
+  Plug 'tpope/vim-unimpaired', { 'as': 'unimpaired', 'tag': '*' }
+call plug#end()
+
+" === End Plugin Manager ===
 
 
 " Getting back to normal mode after entering visual mode feels so slow.
