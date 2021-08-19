@@ -241,6 +241,20 @@ tnoremap <silent> <C-t> <C-w>:q!<CR>
 tnoremap <silent> <C-d> <C-w>:q!<CR>
 " Quit with <CTRL+D>
 nnoremap <silent> <C-d> :q!<CR>
+" Move line/selection with <ALT+J/K>
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+" Move line/selection with <ALT+DOWN/UP>
+inoremap <A-Down> <Esc>:m .+1<CR>==gi
+inoremap <A-Up> <Esc>:m .-2<CR>==gi
+nnoremap <A-Down> :m .+1<CR>==
+nnoremap <A-Up> :m .-2<CR>==
+vnoremap <A-Down> :m '>+1<CR>gv=gv
+vnoremap <A-Up> :m '<-2<CR>gv=gv
 
 let g:ctrlp_brief_prompt = 1
 let g:ctrlp_cmd = 'CtrlP'
