@@ -260,6 +260,17 @@ let g:ctrlp_max_files = 0
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_types = ['fil', 'buf']
 
+let g:closetag_filetypes = 'htm,html,xhtml,php,phtml,xml'
+let g:closetag_xhtml_filenames = '*.htm,*.html,*.jsx,*.php,*.phtml,*.xhtml,*.xml'
+
+let g:closetag_regions = {
+  \ 'javascript.jsx': 'jsxRegion',
+  \ 'javascriptreact': 'jsxRegion',
+  \ 'php': 'phpRegion',
+  \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+  \ 'typescriptreact': 'jsxRegion,tsxRegion',
+  \ }
+
 " === End <C> Key Maps ===
 
 
