@@ -88,6 +88,7 @@ set showcmd
 
 " Force to remove trailing new line
 set noeol
+set nofixeol
 
 " Do not `hlsearch` until I press <ENTER>
 set noincsearch
