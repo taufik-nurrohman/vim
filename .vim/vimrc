@@ -87,6 +87,7 @@ set wrap
 set showcmd
 
 " Force to remove trailing new line
+set binary
 set noeol
 set nofixeol
 
@@ -108,7 +109,7 @@ set tabstop=4
 set shiftwidth=4
 
 " Indent with 2 space(s) for specific file type(s)
-autocmd FileType css,html,jade,json,pug,scss,sgml,xml,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
+autocmd FileType css,html,jade,json,pug,scss,sgml,vim,xml,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
 
 " Open split(s) to the bottom and/or right
 set splitbelow
