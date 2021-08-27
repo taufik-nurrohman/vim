@@ -86,6 +86,9 @@ set wrap
 " Show command(s)
 set showcmd
 
+" Force to remove trailing new line
+set noeol
+
 " Do not `hlsearch` until I press <ENTER>
 set noincsearch
 set hlsearch
