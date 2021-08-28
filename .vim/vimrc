@@ -87,8 +87,8 @@ set wrap
 set showcmd
 
 " Do not `hlsearch` until I press <ENTER>
-set noincsearch
 set hlsearch
+set noincsearch
 
 " Ignore case in search string unless I have some upper-case letter(s) there
 set ignorecase
@@ -99,15 +99,16 @@ autocmd CmdWinEnter * set nomagic
 autocmd CmdWinLeave * set magic
 
 " Indent with 4 space(s)
+set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-set shiftwidth=4
 
 " Remove EOL where possible
 set binary
+set fileformat=unix
 set noeol
 set nofixeol
-autocmd BufWritePre * setlocal noeol
+autocmd BufWritePre * setlocal fileformat=unix noeol
 
 " Indent with 2 space(s) for specific file type(s)
 autocmd FileType css,html,jade,json,pug,scss,sgml,vim,xml,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
@@ -118,9 +119,9 @@ set splitright
 
 " Automatic indentation
 set autoindent
+set expandtab
 set smartindent
 set smarttab
-set expandtab
 
 set wildmenu
 
@@ -139,9 +140,9 @@ set background=dark
 
 exec 'colorscheme ' . g:skin
 
-let g:NERDTreeDirArrows = 1
-let g:NERDTreeDirArrowExpandable = '▶'
 let g:NERDTreeDirArrowCollapsible = '▼'
+let g:NERDTreeDirArrowExpandable = '▶'
+let g:NERDTreeDirArrows = 1
 
 " Hide help text and up level description
 " To up one level directory, press <U>
@@ -161,7 +162,7 @@ let g:NERDTreeStatusline = ' '
 let g:NERDTreeShowHidden = 1
 
 " Hide these file(s) from the tree
-set wildignore+=*.DS_Store,*.class,*.hg,*.o,*.obj,*.pyc,*.svn
+set wildignore+=*.DS_Store,*.class,*.hg,*.o,*.obj,*.pyc,*.svn,*.swp
 set wildignore+=.git,composer.lock,package-lock.json
 let g:NERDTreeRespectWildIgnore = 1
 
@@ -180,11 +181,11 @@ autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | else | NER
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | q | endif
 
 " Buggy :(
-let g:strip_whitespace_on_save = 1
 let g:strip_whitelines_on_eof = 1
 let g:strip_whitespace_confirm = 0
-autocmd VimEnter * EnableWhitespace
+let g:strip_whitespace_on_save = 1
 autocmd VimEnter * EnableStripWhitespaceOnSave
+autocmd VimEnter * EnableWhitespace
 
 " Deactivate ruler on entering the insert mode
 autocmd InsertEnter * setlocal noruler
@@ -321,3 +322,8 @@ call plug#end()
 set timeout
 set ttimeout
 set ttimeoutlen=50
+
+
+" " VSCode Vim extension
+" nnoremap <silent> <C-S-e> :NERDTreeFocus<CR>
+" nnoremap <silent> <C-b> :NERDTreeToggle<CR>
