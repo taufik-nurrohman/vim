@@ -214,8 +214,12 @@ vnoremap V <Esc>ggVG
 
 " === Begin <C> Key Maps ===
 
-" Toggle `NERDTree` with <CTRL+N>
-nnoremap <silent> <C-n> :NERDTreeToggle<CR>
+" Edit `.vimrc` file with <CTRL+,>
+nnoremap <silent> <C-,> :tabedit $MYVIMRC<CR>
+" Toggle `NERDTree` with <CTRL+B>
+nnoremap <silent> <C-b> :NERDTreeToggle<CR>
+" Focus `NERDTree` with <CTRL+SHIFT+E>
+nnoremap <silent> <C-S-e> :NERDTreeFocus<CR>
 " Clear search marker and reload color scheme with <CTRL+R>
 nnoremap <silent> <C-r> :nohlsearch <bar> call ReloadColorScheme()<CR><Esc>
 function! ReloadColorScheme()
@@ -288,8 +292,6 @@ nnoremap <Space> <nop>
 let g:mapleader = ' '
 " New tab with <SPACE+T>
 nnoremap <silent> <Leader>t :tabnew<CR>
-" Edit `.vimrc` file with <SPACE+,>
-nnoremap <silent> <Leader>, :tabedit $MYVIMRC<CR>
 
 " === End <Leader> Key Maps ===
 
@@ -322,8 +324,3 @@ call plug#end()
 set timeout
 set ttimeout
 set ttimeoutlen=50
-
-
-" " VSCode Vim extension
-" nnoremap <silent> <C-S-e> :NERDTreeFocus<CR>
-" nnoremap <silent> <C-b> :NERDTreeToggle<CR>
