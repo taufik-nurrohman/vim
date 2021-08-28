@@ -42,13 +42,14 @@ _None._
 
 Keys | Function
 ---- | --------
-<kbd>U</kbd> | Redo.
+<kbd>⇧</kbd> <kbd>u</kbd> | Redo.
+<kbd>⌘</kbd> <kbd>,</kbd> | Edit the `.vim/vimrc` file.
+<kbd>⌘</kbd> <kbd>b</kbd> | Toggle file tree visibility.
 <kbd>⌘</kbd> <kbd>d</kbd> | Close current window/split.
 <kbd>⌘</kbd> <kbd>h</kbd> | Move to the left split if any.
 <kbd>⌘</kbd> <kbd>j</kbd> | Move to the down split if any.
 <kbd>⌘</kbd> <kbd>k</kbd> | Move to the up split if any.
 <kbd>⌘</kbd> <kbd>l</kbd> | Move to the right split if any.
-<kbd>⌘</kbd> <kbd>n</kbd> | Toggle file tree visibility.
 <kbd>⌘</kbd> <kbd>p</kbd> | Find files.
 <kbd>⌘</kbd> <kbd>r</kbd> | Refresh the screen and remove all search marker if any.
 <kbd>⌘</kbd> <kbd>t</kbd> | Toggle terminal mode.
@@ -56,11 +57,11 @@ Keys | Function
 <kbd>⌘</kbd> <kbd>↑</kbd> | Move to the up split if any.
 <kbd>⌘</kbd> <kbd>→</kbd> | Move to the right split if any.
 <kbd>⌘</kbd> <kbd>↓</kbd> | Move to the down split if any.
+<kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>e</kbd> | Focus to the file tree.
 <kbd>⌥</kbd> <kbd>j</kbd> | Move line down.
 <kbd>⌥</kbd> <kbd>k</kbd> | Move line up.
 <kbd>⌥</kbd> <kbd>↑</kbd> | Move line up.
 <kbd>⌥</kbd> <kbd>↓</kbd> | Move line down.
-<kbd>␣</kbd> <kbd>,</kbd> | Edit the `.vim/vimrc` file.
 
 ### Visual
 
