@@ -277,7 +277,6 @@ let g:closetag_xhtml_filenames = '*.htm,*.html,*.jsx,*.php,*.phtml,*.xhtml,*.xml
 let g:closetag_regions = {
   \ 'javascript.jsx': 'jsxRegion',
   \ 'javascriptreact': 'jsxRegion',
-  \ 'php': 'phpRegion',
   \ 'typescript.tsx': 'jsxRegion,tsxRegion',
   \ 'typescriptreact': 'jsxRegion,tsxRegion',
   \ }
