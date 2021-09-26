@@ -43,6 +43,10 @@ _None._
 Keys | Function
 ---- | --------
 <kbd>⇧</kbd> <kbd>u</kbd> | Redo.
+<kbd>⌥</kbd> <kbd>j</kbd> | Move line down.
+<kbd>⌥</kbd> <kbd>k</kbd> | Move line up.
+<kbd>⌥</kbd> <kbd>↑</kbd> | Move line up.
+<kbd>⌥</kbd> <kbd>↓</kbd> | Move line down.
 <kbd>⎈</kbd> <kbd>,</kbd> | Edit the `.vim/vimrc` file.
 <kbd>⎈</kbd> <kbd>b</kbd> | Toggle file tree visibility.
 <kbd>⎈</kbd> <kbd>d</kbd> | Close current window/split.
@@ -58,10 +62,6 @@ Keys | Function
 <kbd>⎈</kbd> <kbd>→</kbd> | Move to the right split if any.
 <kbd>⎈</kbd> <kbd>↓</kbd> | Move to the down split if any.
 <kbd>⎈</kbd> <kbd>⇧</kbd> <kbd>e</kbd> | Focus to the file tree.
-<kbd>⌥</kbd> <kbd>j</kbd> | Move line down.
-<kbd>⌥</kbd> <kbd>k</kbd> | Move line up.
-<kbd>⌥</kbd> <kbd>↑</kbd> | Move line up.
-<kbd>⌥</kbd> <kbd>↓</kbd> | Move line down.
 
 ### Visual
 
