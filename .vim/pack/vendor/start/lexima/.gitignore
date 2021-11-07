@@ -1,0 +1,4 @@
+.bundle
+mysession.vim
+/.plugintest.dein.cache/
+/test/vim-themis
