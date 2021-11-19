@@ -41,8 +41,8 @@ hi TabLineSel ctermfg=231 ctermbg=233 cterm=NONE guifg=#ffffff guibg=#121212 gui
 hi Pmenu ctermfg=111 ctermbg=234 cterm=NONE guifg=#87afff guibg=#1c1c1c gui=NONE
 hi PmenuSel ctermfg=111 ctermbg=236 cterm=NONE guifg=#87afff guibg=#303030 gui=NONE
 
-hi IncSearch ctermfg=234 ctermbg=228 cterm=NONE guifg=#1c1c1c guibg=#ffff87 gui=NONE
-hi Search ctermfg=234 ctermbg=228 cterm=NONE guifg=#1c1c1c guibg=#ffff87 gui=NONE
+hi IncSearch ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
+hi Search ctermfg=NONE ctermbg=NONE cterm=underline guifg=NONE guibg=NONE gui=underline
 
 hi Folded ctermfg=250 ctermbg=0 cterm=NONE guifg=#b2b2b2 guibg=#000000 gui=NONE
 hi MatchParen ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#303030 gui=NONE
