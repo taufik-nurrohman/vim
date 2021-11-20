@@ -214,8 +214,6 @@ vnoremap V <Esc>ggVG
 
 " === Begin <C> Key Maps ===
 
-" Edit `.vimrc` file with <CTRL+,>
-nnoremap <silent> <C-,> :tabedit $MYVIMRC<CR>
 " Toggle `NERDTree` with <CTRL+B>
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 " Focus `NERDTree` with <CTRL+SHIFT+E>
