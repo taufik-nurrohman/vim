@@ -47,7 +47,6 @@ Keys | Function
 <kbd>⌥</kbd> <kbd>k</kbd> | Move line up.
 <kbd>⌥</kbd> <kbd>↑</kbd> | Move line up.
 <kbd>⌥</kbd> <kbd>↓</kbd> | Move line down.
-<kbd>⎈</kbd> <kbd>,</kbd> | Edit the `.vim/vimrc` file.
 <kbd>⎈</kbd> <kbd>b</kbd> | Toggle file tree visibility.
 <kbd>⎈</kbd> <kbd>d</kbd> | Close current window/split.
 <kbd>⎈</kbd> <kbd>h</kbd> | Move to the left split if any.
