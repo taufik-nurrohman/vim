@@ -321,3 +321,5 @@ call plug#end()
 set timeout
 set ttimeout
 set ttimeoutlen=50
+
+set colorcolumn=120
