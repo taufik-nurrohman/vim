@@ -71,6 +71,8 @@ Keys | Function
 <kbd>⌥</kbd> <kbd>k</kbd> | Move line up.
 <kbd>⌥</kbd> <kbd>↑</kbd> | Move line up.
 <kbd>⌥</kbd> <kbd>↓</kbd> | Move line down.
+<kbd>⎈</kbd> <kbd>←</kbd> | Sort-reverse words.
+<kbd>⎈</kbd> <kbd>→</kbd> | Sort words.
 
 ### Visual-Line
 

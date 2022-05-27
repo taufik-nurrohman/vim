@@ -211,6 +211,10 @@ nnoremap U <C-r>
 vnoremap v <Esc>gg0vG$
 vnoremap V <Esc>ggVG
 
+" Sort word(s) with <CTRL+LEFT> or <CTRL+RIGHT>
+vnoremap <C-Left> d:execute 'normal i' . join(reverse(sort(split(getreg('"')))), ' ')<CR>
+vnoremap <C-Right> d:execute 'normal i' . join(sort(split(getreg('"'))), ' ')<CR>
+
 
 " === Begin <C> Key Maps ===
 
