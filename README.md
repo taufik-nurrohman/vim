@@ -15,6 +15,7 @@ Plugins Used
  - [CTRL+P](https://github.com/ctrlpvim/ctrlp.vim)
  - [Close Tag](https://github.com/alvan/vim-closetag)
  - [Commentary](https://github.com/tpope/vim-commentary)
+ - [EditorConfig](https://github.com/editorconfig/editorconfig-vim)
  - [Last Place](https://github.com/farmergreg/vim-lastplace)
  - [Lexima](https://github.com/cohama/lexima.vim)
  - [Nerd Tree Unfocus](https://github.com/baopham/vim-nerdtree-unfocus)

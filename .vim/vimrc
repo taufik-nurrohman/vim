@@ -306,6 +306,7 @@ call plug#begin('~/.vim/pack/vendor/start')
   Plug 'cohama/lexima.vim', { 'as': 'lexima' }
   Plug 'ctrlpvim/ctrlp.vim', { 'as': 'ctrlp' }
   Plug 'dkarter/bullets.vim', { 'as': 'bullets' }
+  Plug 'editorconfig/editorconfig-vim', {'as': 'editorconfig'}
   Plug 'farmergreg/vim-lastplace', { 'as': 'lastplace' }
   Plug 'gcmt/taboo.vim', { 'as': 'taboo' }
   Plug 'maxboisvert/vim-simple-complete', { 'as': 'simple-complete' }
