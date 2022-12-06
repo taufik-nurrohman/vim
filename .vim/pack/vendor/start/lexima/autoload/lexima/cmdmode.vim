@@ -5,6 +5,8 @@ let s:L = lexima#vital().L
 
 let s:map_dict = {}
 
+let s:magic_cursor_string = '__LEXIMA_CMDLINE_CURSOR__'
+
 function! lexima#cmdmode#get_map_rules(char) abort
   let char = lexima#string#to_upper_specialkey(a:char)
   if has_key(s:map_dict, char)
@@ -19,6 +21,14 @@ function! lexima#cmdmode#get_map_rules(char) abort
   endif
 endfunction
 
+function! lexima#cmdmode#_default_prehook(char) abort
+  if lexima#string#to_inputtable(a:char) !~ '.*\k$' && !g:lexima_disable_abbrev_trigger
+    return '<C-]>'
+  else
+    return ''
+  endif
+endfunction
+
 function! lexima#cmdmode#add_rules(rule)
   " Expect a:rule to be regularized.
   if has_key(s:map_dict, a:rule.char)
@@ -28,8 +38,8 @@ function! lexima#cmdmode#add_rules(rule)
     \ 'rules': {
     \     '_': lexima#sortedlist#new([], function('lexima#cmdmode#_priority_order'))
     \   },
-    \ 'prehooks': [],
-    \ 'posthooks': [],
+    \ 'prehook': function('lexima#cmdmode#_default_prehook'),
+    \ 'posthook': '',
     \ }
     " Add <C-]> prehook to expand abbreviation.
     if (v:version > 703 || (v:version == 703 && has('patch489'))) " old vim does not support <C-]>
@@ -72,41 +82,59 @@ endfunction
 function! lexima#cmdmode#_expand(char) abort
   let char = lexima#string#to_upper_specialkey(a:char)
   let map = s:map_dict[char]
-  let prehooks = lexima#string#to_inputtable(join(map.prehooks, ''))
-  let posthooks = lexima#string#to_inputtable(join(map.posthooks, ''))
+  let prehook = lexima#string#to_inputtable(
+  \ type(map.prehook) == v:t_func ? call(map.prehook, [a:char]) : map.prehook
+  \ )
+  let posthook = lexima#string#to_inputtable(
+  \ type(map.posthook) == v:t_func ? call(map.posthook, [a:char]) : map.posthook
+  \ )
+  return prehook .. s:input_impl(char) .. posthook
+endfunction
+
+function! s:input_impl(char) abort
+  let char = a:char
   let pos = getcmdpos()
   let cmdline = getcmdline()
-  let [precursor, postcursor] = lexima#string#take_many(cmdline, pos-1)
   let rule = s:find_rule(char)
   if rule == {}
+    if char == '<ESC>'
+      return lexima#string#to_inputtable('<C-C>')
+    endif
     return lexima#string#to_inputtable(char)
   else
+    let final_input = ''
     if has_key(rule, 'leave')
       if type(rule.leave) ==# type(0)
-        let input = repeat("\<Right>", rule.leave)
+        let final_input .= repeat("\<Right>", rule.leave)
       elseif type(rule.leave) ==# type('')
         let matchidx = match(cmdline[pos-1:-1], lexima#string#to_inputtable(rule.leave))
         if matchidx ==# -1
-          let input = a:char
+          let final_input .= char
         else
-          let input = repeat("\<Right>", matchidx + 1)
+          let final_input .= repeat("\<Right>", matchidx + 1)
         endif
       else
         throw 'lexima: Not applicable rule (' . string(rule) . ')'
       endif
-      let input_after = ''
-    else
-      let input = rule.input
-      if has_key(rule, 'delete')
-        let input .= repeat("\<Del>", rule.delete)
-      endif
-      let input_after = rule.input_after
     endif
-    return lexima#string#to_inputtable(input) . lexima#string#to_inputtable(input_after) . repeat("\<Left>", len(lexima#string#to_inputtable(input_after)))
+    if has_key(rule, 'delete')
+      if type(rule.delete) ==# type(0)
+        let final_input .= repeat("\<Del>", rule.delete)
+      elseif type(rule.delete) ==# type('')
+        let matchidx = match(cmdline[pos-1:-1], lexima#string#to_inputtable(rule.leave))
+        if matchidx ==# -1
+          let final_input .= char
+        else
+          let final_input .= repeat("\<Del>", matchidx + 1)
+        endif
+      endif
+    endif
+    let final_input .= rule.input . rule.input_after
+    return lexima#string#to_inputtable(final_input) . repeat("\<Left>", len(lexima#string#to_inputtable(rule.input_after)))
   endif
 endfunction
 
-function! s:find_rule(char)
+function! s:find_rule(char) abort
   let pos = getcmdpos()
   let cmdline = getcmdline()
   let [precursor, postcursor] = lexima#string#take_many(cmdline, pos-1)
@@ -115,8 +143,9 @@ function! s:find_rule(char)
   for rule in rules
     if rule.mode =~# 'c' || rule.mode =~# cmdtype
       if rule.char ==# a:char
-        let [pre_at, post_at] = map(split(rule.at, '\\%#', 1) + ['', ''], 'v:val . "$"')[0:1]
-        if precursor =~# pre_at && postcursor =~# post_at
+        let rule_at = substitute(rule.at, '\\%#\|$', s:magic_cursor_string, '')
+        let cmdline_with_cursor = (precursor .. s:magic_cursor_string .. postcursor)
+        if cmdline_with_cursor =~# rule_at
           return rule
         endif
       endif

@@ -300,6 +300,7 @@ nnoremap <silent> <Leader>t :tabnew<CR>
 " === Begin Plugin Manager ===
 
 call plug#begin('~/.vim/pack/vendor/start')
+  Plug 'https://github.com/zef/vim-cycle', { 'as': 'cycle' }
   Plug 'PhilRunninger/nerdtree-visual-selection', { 'as': 'nerdtree-visual-selection' }
   Plug 'alvan/vim-closetag', { 'as': 'closetag' }
   Plug 'baopham/vim-nerdtree-unfocus', { 'as': 'nerdtree-unfocus' }

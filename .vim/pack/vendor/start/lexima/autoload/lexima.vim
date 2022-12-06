@@ -20,6 +20,8 @@ if exists('g:lexima_nvim_accept_pum_with_enter')
 endif
 let g:lexima_accept_pum_with_enter = get(g:, 'lexima_accept_pum_with_enter', has('nvim'))
 let g:lexima_ctrlh_as_backspace = get(g:, 'lexima_ctrlh_as_backspace', 0)
+let g:lexima_disable_on_nofile = get(g:, 'lexima_disable_on_nofile', 0)
+let g:lexima_disable_abbrev_trigger = get(g:, 'lexima_disable_abbrev_trigger', 0)
 
 let s:lexima_vital = {
 \ 'L' : s:L,
@@ -85,6 +87,7 @@ let g:lexima#newline_rules = [
 \ {'char': '<CR>', 'at': '{\%#$', 'input_after': '<CR>}', 'except': '\C\v^(\s*)\S.*%#\n%(%(\s*|\1\s.+)\n)*\1\}'},
 \ {'char': '<CR>', 'at': '\[\%#]', 'input_after': '<CR>'},
 \ {'char': '<CR>', 'at': '\[\%#$', 'input_after': '<CR>]', 'except': '\C\v^(\s*)\S.*%#\n%(%(\s*|\1\s.+)\n)*\1\]'},
+\ {'char': '<CR>', 'at': '^```\(\S*\)\%#```', 'input': '<CR>', 'input_after': '<CR>'},
 \ ]
 
 let g:lexima#space_rules = [
@@ -164,7 +167,11 @@ function! s:regularize(rule)
     let reg_rule.syntax = [reg_rule.syntax]
   endif
   if !has_key(reg_rule, 'input')
-    let reg_rule.input = reg_rule.char
+    if has_key(reg_rule, 'leave')
+      let reg_rule.input = ''
+    else
+      let reg_rule.input = reg_rule.char
+    endif
   endif
   let reg_rule.char = lexima#string#to_upper_specialkey(reg_rule.char)
   return reg_rule

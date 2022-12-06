@@ -15,6 +15,7 @@ Plugins Used
  - [CTRL+P](https://github.com/ctrlpvim/ctrlp.vim)
  - [Close Tag](https://github.com/alvan/vim-closetag)
  - [Commentary](https://github.com/tpope/vim-commentary)
+ - [Cycle](https://github.com/zef/vim-cycle)
  - [EditorConfig](https://github.com/editorconfig/editorconfig-vim)
  - [Last Place](https://github.com/farmergreg/vim-lastplace)
  - [Lexima](https://github.com/cohama/lexima.vim)
@@ -48,6 +49,7 @@ Keys | Function
 <kbd>⌥</kbd> <kbd>k</kbd> | Move line up.
 <kbd>⌥</kbd> <kbd>↑</kbd> | Move line up.
 <kbd>⌥</kbd> <kbd>↓</kbd> | Move line down.
+<kbd>⎈</kbd> <kbd>a</kbd> | [Cycle](https://github.com/zef/vim-cycle) tokens such as `false` with `true`.
 <kbd>⎈</kbd> <kbd>b</kbd> | Toggle file tree visibility.
 <kbd>⎈</kbd> <kbd>d</kbd> | Close current window/split.
 <kbd>⎈</kbd> <kbd>h</kbd> | Move to the left split if any.
@@ -57,6 +59,7 @@ Keys | Function
 <kbd>⎈</kbd> <kbd>p</kbd> | Find files.
 <kbd>⎈</kbd> <kbd>r</kbd> | Refresh the screen and remove all search marker if any.
 <kbd>⎈</kbd> <kbd>t</kbd> | Toggle terminal mode.
+<kbd>⎈</kbd> <kbd>x</kbd> | [Cycle](https://github.com/zef/vim-cycle) tokens such as `false` with `true`.
 <kbd>⎈</kbd> <kbd>←</kbd> | Move to the left split if any.
 <kbd>⎈</kbd> <kbd>↑</kbd> | Move to the up split if any.
 <kbd>⎈</kbd> <kbd>→</kbd> | Move to the right split if any.
