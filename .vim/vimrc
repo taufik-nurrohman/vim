@@ -211,6 +211,9 @@ nnoremap U <C-r>
 vnoremap v <Esc>gg0vG$
 vnoremap V <Esc>ggVG
 
+" Put cursor at selection start even if you are selecting from below
+vnoremap y ygv<Esc>
+
 " Sort line(s) with <CTRL+DOWN> or <CTRL+UP>
 vnoremap <C-Down> :sort<CR><Esc>
 vnoremap <C-Up> :sort!<CR><Esc>
