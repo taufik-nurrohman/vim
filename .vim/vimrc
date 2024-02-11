@@ -334,7 +334,7 @@ set timeout
 set ttimeout
 set ttimeoutlen=50
 
-set colorcolumn=120
+set colorcolumn=80,120
 
 " <https://stackoverflow.com/a/16920294/1163000>
 set re=1
