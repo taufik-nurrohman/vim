@@ -222,6 +222,12 @@ vnoremap <C-Up> :sort!<CR><Esc>
 vnoremap <C-Left> d:execute 'normal i' . join(reverse(sort(split(getreg('"'), ' '))), ' ')<CR>
 vnoremap <C-Right> d:execute 'normal i' . join(sort(split(getreg('"'), ' ')), ' ')<CR>
 
+" Prevent moving cursor with arrow key(s)
+map <Down> <Nop>
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+
 " === Begin <C> Key Maps ===
 
 " Toggle `NERDTree` with <CTRL+B>
@@ -331,10 +337,13 @@ call plug#end()
 " Getting back to normal mode after entering visual mode feels so slow.
 " Maybe this is due to a certain plugin. These lines solve the problem.
 set timeout
-set ttimeout
-set ttimeoutlen=50
+set timeoutlen=1000
+set ttimeoutlen=100
 
-set colorcolumn=80,120
+set colorcolumn=120
 
 " <https://stackoverflow.com/a/16920294/1163000>
 set re=1
+
+" <https://vi.stackexchange.com/q/422>
+set list listchars=eol:\ ,extends:…,nbsp:●,precedes:…,space:\ ,tab:⇥\ ,trail:·

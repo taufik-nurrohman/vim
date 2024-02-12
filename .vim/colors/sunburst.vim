@@ -14,7 +14,9 @@ hi Normal ctermfg=231 ctermbg=233 cterm=NONE guifg=#ffffff guibg=#121212 gui=NON
 hi Visual ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#303030 gui=NONE
 
 hi LineNr ctermfg=244 ctermbg=234 cterm=NONE guifg=#808080 guibg=#1c1c1c gui=NONE
+
 hi NonText ctermfg=236 ctermbg=233 cterm=NONE guifg=#303030 guibg=#121212 gui=NONE
+hi SpecialKey ctermfg=236 ctermbg=233 cterm=NONE guifg=#303030 guibg=#121212 gui=NONE
 
 hi CursorColumn ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#1c1c1c gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#1c1c1c gui=NONE
