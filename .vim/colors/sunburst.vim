@@ -1,5 +1,5 @@
 " Modified from <https://github.com/sickill/vim-sunburst>
-" Current Vim version: 8.0
+" Current Vim version: 9.0
 
 set background=dark
 hi clear
@@ -22,6 +22,14 @@ hi CursorColumn ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#1c1c1c gui
 hi CursorLine ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#1c1c1c gui=NONE
 
 hi ColorColumn ctermfg=NONE ctermbg=234 cterm=NONE guifg=NONE guibg=#1c1c1c gui=NONE
+
+hi DiffAdd ctermfg=233 ctermbg=2 cterm=NONE guifg=#121212 guibg=#008000 gui=NONE
+hi DiffChange ctermfg=244 ctermbg=236 cterm=NONE guifg=#808080 guibg=#303030 gui=NONE
+hi DiffDelete ctermfg=233 ctermbg=1 cterm=NONE guifg=#121212 guibg=#800000 gui=NONE
+hi DiffText ctermfg=233 ctermbg=4 cterm=NONE guifg=#121212 guibg=#000080 gui=NONE
+
+hi DiffAdded ctermfg=233 ctermbg=2 cterm=NONE guifg=#121212 guibg=#008000 gui=NONE
+hi DiffRemoved ctermfg=233 ctermbg=1 cterm=NONE guifg=#121212 guibg=#800000 gui=NONE
 
 hi VertSplit ctermfg=236 ctermbg=233 cterm=NONE guifg=#303030 guibg=#121212 gui=NONE
 
