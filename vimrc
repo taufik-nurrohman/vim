@@ -343,7 +343,7 @@ set ttimeoutlen=100
 set colorcolumn=120
 
 " <https://stackoverflow.com/a/16920294/1163000>
-set re=1
+set re=0
 
 " <https://vi.stackexchange.com/q/422>
 set list listchars=eol:\ ,extends:…,nbsp:●,precedes:…,space:\ ,tab:⇥\ ,trail:·

@@ -59,7 +59,7 @@ hi MatchParen ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#303030 gui=N
 
 hi Comment ctermfg=249 ctermbg=NONE cterm=NONE guifg=#b2b2b2 guibg=NONE gui=NONE
 hi Constant ctermfg=68 ctermbg=NONE cterm=NONE guifg=#5f87d7 guibg=NONE gui=NONE
-hi Directory ctermfg=68 ctermbg=NONE cterm=NONE guifg=#5f87d7 guibg=NONE gui=NONE
+hi Directory ctermfg=68 ctermbg=NONE cterm=bold guifg=#5f87d7 guibg=NONE gui=NONE
 hi Error ctermfg=233 ctermbg=203 cterm=NONE guifg=#121212 guibg=#ff5f5f gui=NONE
 hi Function ctermfg=111 ctermbg=NONE cterm=NONE guifg=#87afff guibg=NONE gui=NONE
 hi Identifier ctermfg=113 ctermbg=NONE cterm=NONE guifg=#87d75f guibg=NONE gui=NONE
