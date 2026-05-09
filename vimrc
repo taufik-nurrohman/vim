@@ -105,10 +105,10 @@ set smartcase
 autocmd CmdWinEnter * set nomagic
 autocmd CmdWinLeave * set magic
 
-" Indent with 4 space(s)
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+" Indent with 2 space(s)
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 
 " Remove EOL where possible
 set binary
@@ -116,9 +116,6 @@ set fileformat=unix
 set noeol
 set nofixeol
 autocmd BufWritePre * setlocal fileformat=unix noeol
-
-" Indent with 2 space(s) for specific file type(s)
-autocmd FileType css,html,jade,json,pug,scss,sgml,vim,xml,yaml setlocal softtabstop=2 tabstop=2 shiftwidth=2
 
 " Open split(s) to the bottom and/or right
 set splitbelow
