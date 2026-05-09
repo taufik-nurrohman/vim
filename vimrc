@@ -2,6 +2,13 @@
 " <https://taufik-nurrohman.com>
 
 
+" Disable nested syntax highlight inside PHP string(s)
+let g:php_html_load = 0
+let g:php_sql_heredoc = 0
+let g:php_sql_nowdoc = 0
+let g:php_sql_query = 0
+
+
 set title
 set nocompatible
 
