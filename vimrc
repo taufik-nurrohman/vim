@@ -2,11 +2,20 @@
 " <https://taufik-nurrohman.com>
 
 
-" Disable nested syntax highlight inside PHP string(s)
-let g:php_html_load = 0
+" Disable HTML & SQL syntax highlight inside PHP string(s)
+let g:php_html_in_heredoc = 0
+let g:php_html_in_nowdoc = 0
+let g:php_html_in_strings = 0
+let g:php_html_load = 1
+let g:php_ignore_phpdoc = 0
 let g:php_sql_heredoc = 0
 let g:php_sql_nowdoc = 0
 let g:php_sql_query = 0
+let g:php_xml_heredoc = 0
+let g:php_xml_nowdoc = 0
+
+" Include `$` as part of the identifier
+let g:php_var_selector_is_identifier = 1
 
 
 set title
